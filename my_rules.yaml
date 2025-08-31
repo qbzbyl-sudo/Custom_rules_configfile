@@ -5,8 +5,8 @@ rules:
   - IP-CIDR,192.168.0.0/16,DIRECT        # 局域网
   - IP-CIDR,192.168.191.0/24,DIRECT      # zerotier虚拟局域网
   - DOMAIN-KEYWORD,rhodes-island,DIRECT
-  - DOMAIN-KEYWORD,picacomic,PROXY
-  - DOMAIN-KEYWORD,hsex,PROXY
+  - DOMAIN-KEYWORD,picacomic,三毛机场
+  - DOMAIN-KEYWORD,hsex,三毛机场
   - DOMAIN-KEYWORD,dynv6,DIRECT           # DDNS
 
 # Steam下载直连规则（关键！添加在这里）
