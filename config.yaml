@@ -114,7 +114,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：197.02 GB
+- name: 剩余流量：197 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -311,7 +311,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-yyVUt80YVGs0u7xs.sm-node.com
+  servername: r-EbrbakANnMsKxra0.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -331,7 +331,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-vRIAZfmjgVdQArTz.sm-node.com
+  servername: r-XLo50210S6Hdkt6Q.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -351,7 +351,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-ppSYHyLLS3XV2ugl.sm-node.com
+  servername: r-uT3fPrwBWvtCeYPK.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -371,7 +371,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-RzyYVSStwcgKREAs.sm-node.com
+  servername: r-cZlC6ZSrtGUTrdXg.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -406,7 +406,7 @@ proxies:
   udp: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  sni: jssiSwbnXalXZ9GR.cn
+  sni: l9f4EQyByNhK4vRV.cn
 - name: 台湾(原生IP)
   server: hinetddns1.aikunapp.com
   port: 5001
@@ -429,7 +429,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - 故障转移
-  - 剩余流量：197.02 GB
+  - 剩余流量：197 GB
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -464,7 +464,7 @@ proxy-groups:
 - name: 自动选择
   type: url-test
   proxies:
-  - 剩余流量：197.02 GB
+  - 剩余流量：197 GB
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -501,7 +501,7 @@ proxy-groups:
 - name: 故障转移
   type: fallback
   proxies:
-  - 剩余流量：197.02 GB
+  - 剩余流量：197 GB
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -673,8 +673,3 @@ rule-providers:
     behavior: ipcidr
     format: mrs
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
-subscription-userinfo:
-  upload: 412166470
-  download: 2790771141
-  total: 214748364800
-  expire: 1788200135
