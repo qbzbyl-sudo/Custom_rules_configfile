@@ -1,0 +1,18 @@
+# 这是我的个人规则
+# 规则会从上到下匹配，这里的规则会优先于订阅自带的规则
+rules:
+  #自定义给规则
+  - IP-CIDR,192.168.0.0/16,DIRECT        # 局域网
+  - IP-CIDR,192.168.191.0/24,DIRECT      # zerotier虚拟局域网
+  - DOMAIN-KEYWORD,rhodes-island,DIRECT
+  - DOMAIN-KEYWORD,picacomic,PROXY
+  - DOMAIN-KEYWORD,hsex,PROXY
+  - DOMAIN-KEYWORD,dynv6,DIRECT           # DDNS
+
+# Steam下载直连规则（关键！添加在这里）
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT  # 主下载CDN
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT         # 内容服务器
+  - DOMAIN-SUFFIX,steamusercontent.com,DIRECT     # 用户内容
+  - DOMAIN-SUFFIX,steamstatic.com,DIRECT          # 静态资源
+  - DOMAIN-SUFFIX,steamgames.com,DIRECT           # 游戏资源
+  - DOMAIN-SUFFIX,steampowered.com,DIRECT         # 补丁下载（可选）
