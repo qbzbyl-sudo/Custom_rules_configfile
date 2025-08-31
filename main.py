@@ -7,12 +7,7 @@ from datetime import datetime
 
 # ===============================================
 # 本脚本是专为处理Clash订阅设计的终极版本
-# 功能包括：
-# 1. 伪装成Clash客户端请求，防止被服务器拒绝
-# 2. 智能判断订阅内容是Base64还是纯文本，并进行相应处理
-# 3. 提取并保留原始订阅中的流量和到期时间信息 (Subscription-Userinfo)
-# 4. 将个人自定义规则合并到配置文件中
-# 5. 生成新的、包含所有信息的配置文件
+# 新增功能：打印所有响应头，用于最终诊断
 # ===============================================
 
 # --- 配置区 ---
@@ -27,15 +22,12 @@ def parse_subscription_userinfo(header_str):
     if not header_str:
         return None
     
-    # 使用正则表达式匹配所有 key=value 对
     pairs = re.findall(r'(\w+)=([\d.]+)', header_str)
-    info = {key: int(float(value)) for key, value in pairs} # 将流量转换为整数
+    info = {key: int(float(value)) for key, value in pairs}
     
-    # 查找并转换expire时间戳
     expire_match = re.search(r'expire=(\d+)', header_str)
     if expire_match:
         expire_timestamp = int(expire_match.group(1))
-        # 将UNIX时间戳转换为易于阅读的格式
         info['expire_str'] = datetime.fromtimestamp(expire_timestamp).strftime('%Y-%m-%d %H:%M:%S')
         info['expire'] = expire_timestamp
         
@@ -55,17 +47,32 @@ def main():
         response = requests.get(SUB_URL_ENV, headers=HEADERS)
         response.raise_for_status()
         response.encoding = 'utf-8'
+        
+        # ===============================================================
+        # VVVV  【核心诊断代码】打印所有收到的响应头  VVVV
+        print("\n   --- 服务器响应头信息 ---")
+        for key, value in response.headers.items():
+            print(f"   {key}: {value}")
+        print("   ------------------------\n")
+        # ^^^^  【诊断代码结束】  ^^^^
+        # ===============================================================
+
         sub_content_raw = response.text
         
-        # 2. 提取并解析Subscription-Userinfo头
-        userinfo_header = response.headers.get('Subscription-Userinfo')
+        # 2. 提取并解析Subscription-Userinfo头 (不区分大小写)
+        userinfo_header = None
+        for key, value in response.headers.items():
+            if key.lower() == 'subscription-userinfo':
+                userinfo_header = value
+                break
+        
         sub_info = parse_subscription_userinfo(userinfo_header)
         if sub_info:
             print(f"   成功提取到订阅信息: {sub_info}")
         else:
-            print("   警告: 未在响应头中找到有效的订阅信息。")
+            print("   警告: 未在响应头中找到有效的'Subscription-Userinfo'。")
 
-        # 3. 智能解码和解析YAML内容
+        # ... (后续代码与上一版完全相同，这里省略以便清晰)
         content_to_parse = ""
         try:
             content_to_parse = base64.b64decode(sub_content_raw).decode('utf-8')
@@ -81,12 +88,10 @@ def main():
             exit(1)
         print("   订阅文件下载并解析成功。")
         
-        # 4. 将订阅信息添加到配置文件中 (如果存在)
         if sub_info:
             config_data['subscription-userinfo'] = sub_info
             print("   已将订阅信息添加到新的配置文件中。")
 
-        # 5. 读取并合并自定义规则
         print(f"   正在读取自定义规则文件: {CUSTOM_RULES_PATH}")
         with open(CUSTOM_RULES_PATH, 'r', encoding='utf-8') as f:
             custom_rules_data = yaml.safe_load(f)
@@ -101,7 +106,6 @@ def main():
         else:
             print("   警告：自定义规则文件中没有找到有效的'rules'列表。")
 
-        # 6. 写入最终的配置文件
         print(f"   正在将最终配置写入到: {OUTPUT_CONFIG_PATH}")
         with open(OUTPUT_CONFIG_PATH, 'w', encoding='utf-8') as f:
             yaml.dump(config_data, f, allow_unicode=True, sort_keys=False)
