@@ -3,11 +3,10 @@ import yaml
 import requests
 import base64
 import re
-from datetime import datetime
 
 # ===============================================
 # 本脚本是专为处理Clash订阅设计的终极版本
-# 新增功能：打印所有响应头，用于最终诊断
+# 最终修正：移除 expire_str 字段，确保与OpenClash等客户端完美兼容
 # ===============================================
 
 # --- 配置区 ---
@@ -18,20 +17,28 @@ HEADERS = {'User-Agent': 'Clash/2023.08.17 Premium'}
 
 # --- 函数区 ---
 def parse_subscription_userinfo(header_str):
-    """从Subscription-Userinfo头中解析流量和到期时间信息"""
+    """从Subscription-Userinfo头中解析标准的流量和到期时间信息"""
     if not header_str:
         return None
     
-    pairs = re.findall(r'(\w+)=([\d.]+)', header_str)
-    info = {key: int(float(value)) for key, value in pairs}
+    # 只匹配 upload, download, total, expire 这四个标准字段
+    upload = re.search(r'upload=([\d.]+)', header_str)
+    download = re.search(r'download=([\d.]+)', header_str)
+    total = re.search(r'total=([\d.]+)', header_str)
+    expire = re.search(r'expire=(\d+)', header_str)
+
+    # 如果关键字段缺失，则返回None
+    if not all([upload, download, total, expire]):
+        return None
+
+    info = {
+        'upload': int(float(upload.group(1))),
+        'download': int(float(download.group(1))),
+        'total': int(float(total.group(1))),
+        'expire': int(expire.group(1))
+    }
     
-    expire_match = re.search(r'expire=(\d+)', header_str)
-    if expire_match:
-        expire_timestamp = int(expire_match.group(1))
-        info['expire_str'] = datetime.fromtimestamp(expire_timestamp).strftime('%Y-%m-%d %H:%M:%S')
-        info['expire'] = expire_timestamp
-        
-    return info if info else None
+    return info
 
 # --- 主程序 ---
 def main():
@@ -42,24 +49,12 @@ def main():
         exit(1)
 
     try:
-        # 1. 下载原始订阅文件
         print("   正在以Clash客户端名义下载订阅内容...")
         response = requests.get(SUB_URL_ENV, headers=HEADERS)
         response.raise_for_status()
         response.encoding = 'utf-8'
-        
-        # ===============================================================
-        # VVVV  【核心诊断代码】打印所有收到的响应头  VVVV
-        print("\n   --- 服务器响应头信息 ---")
-        for key, value in response.headers.items():
-            print(f"   {key}: {value}")
-        print("   ------------------------\n")
-        # ^^^^  【诊断代码结束】  ^^^^
-        # ===============================================================
-
         sub_content_raw = response.text
         
-        # 2. 提取并解析Subscription-Userinfo头 (不区分大小写)
         userinfo_header = None
         for key, value in response.headers.items():
             if key.lower() == 'subscription-userinfo':
@@ -68,11 +63,10 @@ def main():
         
         sub_info = parse_subscription_userinfo(userinfo_header)
         if sub_info:
-            print(f"   成功提取到订阅信息: {sub_info}")
+            print(f"   成功提取到标准订阅信息: {sub_info}")
         else:
-            print("   警告: 未在响应头中找到有效的'Subscription-Userinfo'。")
+            print("   警告: 未在响应头中找到有效的订阅信息。")
 
-        # ... (后续代码与上一版完全相同，这里省略以便清晰)
         content_to_parse = ""
         try:
             content_to_parse = base64.b64decode(sub_content_raw).decode('utf-8')
@@ -90,7 +84,7 @@ def main():
         
         if sub_info:
             config_data['subscription-userinfo'] = sub_info
-            print("   已将订阅信息添加到新的配置文件中。")
+            print("   已将标准订阅信息添加到新的配置文件中。")
 
         print(f"   正在读取自定义规则文件: {CUSTOM_RULES_PATH}")
         with open(CUSTOM_RULES_PATH, 'r', encoding='utf-8') as f:
