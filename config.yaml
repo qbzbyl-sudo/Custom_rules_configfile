@@ -114,7 +114,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：162.06 GB
+- name: 剩余流量：160.81 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -123,7 +123,7 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   sni: 127.0.0.1
-- name: 距离下次重置剩余：21 天
+- name: 距离下次重置剩余：20 天
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -320,7 +320,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-D3iZm9HzYf2P8bt9.sm-node.com
+  servername: r-Ir2gIyolBnqR6PzA.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -340,7 +340,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-uLXXA0UJtMf5NSgV.sm-node.com
+  servername: r-piK34nvoe6JiJ5T1.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -360,7 +360,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-cSb37NtX9Myl6ASH.sm-node.com
+  servername: r-bobTT9cZ95Jyukud.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -380,7 +380,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-d7dWrhGXfS1dNtZo.sm-node.com
+  servername: r-F45SN1FAEihvnUtJ.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -415,7 +415,7 @@ proxies:
   udp: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  sni: ohF8bVMqQZ8nFqHn.cn
+  sni: 7loMoJABXoIRf9ef.cn
 - name: 台湾(原生IP)
   server: hinetddns1.aikunapp.com
   port: 5001
@@ -438,8 +438,8 @@ proxy-groups:
   proxies:
   - 自动选择
   - 故障转移
-  - 剩余流量：162.06 GB
-  - 距离下次重置剩余：21 天
+  - 剩余流量：160.81 GB
+  - 距离下次重置剩余：20 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -474,8 +474,8 @@ proxy-groups:
 - name: 自动选择
   type: url-test
   proxies:
-  - 剩余流量：162.06 GB
-  - 距离下次重置剩余：21 天
+  - 剩余流量：160.81 GB
+  - 距离下次重置剩余：20 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -512,8 +512,8 @@ proxy-groups:
 - name: 故障转移
   type: fallback
   proxies:
-  - 剩余流量：162.06 GB
-  - 距离下次重置剩余：21 天
+  - 剩余流量：160.81 GB
+  - 距离下次重置剩余：20 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
