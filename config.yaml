@@ -114,7 +114,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：154.67 GB
+- name: 剩余流量：153.18 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -320,7 +320,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-iwOjCVVr5f0lf7HI.sm-node.com
+  servername: r-grbgA86NuJmkEOAk.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -340,7 +340,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-EfA9A7sJNmEIq2Gc.sm-node.com
+  servername: r-nLtWQcsWepPUnGHp.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -360,7 +360,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-LAjEy9LoP9MteLo1.sm-node.com
+  servername: r-5hppEDx2ghjLUB3C.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -380,7 +380,7 @@ proxies:
   tls: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-S2ExLF3epNJXtPeB.sm-node.com
+  servername: r-1moyqv0tTH8buxAp.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -415,7 +415,7 @@ proxies:
   udp: true
   client-fingerprint: chrome
   skip-cert-verify: true
-  sni: OMK8VNyJNZEbXO2W.cn
+  sni: PcBj5EmewPv12etQ.cn
 - name: 台湾(原生IP)
   server: hinetddns1.aikunapp.com
   port: 5001
@@ -438,7 +438,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - 故障转移
-  - 剩余流量：154.67 GB
+  - 剩余流量：153.18 GB
   - 距离下次重置剩余：19 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -474,7 +474,7 @@ proxy-groups:
 - name: 自动选择
   type: url-test
   proxies:
-  - 剩余流量：154.67 GB
+  - 剩余流量：153.18 GB
   - 距离下次重置剩余：19 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -512,7 +512,7 @@ proxy-groups:
 - name: 故障转移
   type: fallback
   proxies:
-  - 剩余流量：154.67 GB
+  - 剩余流量：153.18 GB
   - 距离下次重置剩余：19 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
