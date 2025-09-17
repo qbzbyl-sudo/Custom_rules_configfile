@@ -6,8 +6,11 @@ log-level: info
 external-controller: 127.0.0.1:9090
 global-client-fingerprint: chrome
 unified-delay: true
+tcp-concurrent: true
 geox-url:
-  mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb
+  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
 dns:
   enable: true
   ipv6: true
@@ -114,56 +117,59 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：124.83 GB
+- name: 剩余流量：124.48 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: 127.0.0.1
-- name: 距离下次重置剩余：14 天
+  skip-cert-verify: true
+- name: 距离下次重置剩余：13 天
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: 127.0.0.1
+  skip-cert-verify: true
 - name: 套餐到期：2026-09-01
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: 127.0.0.1
+  skip-cert-verify: true
 - name: 美国 pz 电信优化
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: 127.0.0.1
+  skip-cert-verify: true
 - name: 美国 rs 新协议
   type: anytls
   server: tj-us-1.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: bootcdn.xuexi.cn
+  skip-cert-verify: true
+- name: 1.5x-韩国-三网优化
+  type: anytls
+  server: krgc.aikunapp.com
+  port: 6001
+  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+  udp: true
+  sni: s0.awsstatic.com
+  skip-cert-verify: true
 - name: 2x专线-香港-1
   server: v4-aws-hk.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 2x专线-香港-2 (新协议)
@@ -172,30 +178,29 @@ proxies:
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  skip-cert-verify: true
 - name: 2x专线-香港-3 (IPv6)
-  type: anytls
+  type: trojan
   server: v6-aws-hk.aikunapp.com
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
   skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  network: tcp
 - name: 2x专线-香港-4 (IPv6)
   server: v6-aws-hk.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 2x专线-日本-1
   server: v4-aws-jp.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 2x专线-日本-2 (新协议)
@@ -204,30 +209,29 @@ proxies:
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  skip-cert-verify: true
 - name: 2x专线-日本-3 (IPv6)
-  type: anytls
+  type: trojan
   server: v6-aws-jp.aikunapp.com
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
   skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  network: tcp
 - name: 2x专线-日本-4 (IPv6)
   server: v6-aws-jp.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 2x专线-新加坡-1
   server: v4-aws-sg.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 2x专线-新加坡-2 (新协议)
@@ -236,23 +240,22 @@ proxies:
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  skip-cert-verify: true
 - name: 2x专线-新加坡-3 (IPv6)
-  type: anytls
+  type: trojan
   server: v6-aws-sg.aikunapp.com
   port: 7001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
   skip-cert-verify: true
   sni: d1--cn-gotcha204-3.bilivideo.com
+  network: tcp
 - name: 2x专线-新加坡-4 (IPv6)
   server: v6-aws-sg.aikunapp.com
   port: 7001
-  sni: d1--cn-gotcha204-3.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-3.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 如果很少节点可用，去官网更新软件
@@ -263,32 +266,33 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
+  network: tcp
 - name: 美国 DATASHACK (gpt优化)
   server: us-ds.aikunapp.com
   port: 5001
-  sni: d1--cn-gotcha204-4.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 美国 DIRECT1 三网优化
   server: us-rs.aikunapp.com
   port: 5001
-  sni: d1--cn-gotcha204-4.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 美国 DIRECT2 三网优化
   server: us-oracle.aikunapp.com
   port: 5001
-  sni: d1--cn-gotcha204-4.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 加拿大 IPv6
   server: 2607:5300:205:200::3017
   port: 5021
-  sni: d1--cn-gotcha204-4.bilivideo.com
   skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 加拿大 tls
@@ -297,18 +301,16 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: swcdn.apple.com
+  skip-cert-verify: true
 - name: 德国 tls
   type: anytls
   server: 54.37.74.147
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: swcdn.apple.com
+  skip-cert-verify: true
 - name: 加拿大 高速 cdn 1
   type: vmess
   server: cdncdncdn.aikunapp.com
@@ -318,17 +320,13 @@ proxies:
   cipher: auto
   udp: true
   tls: true
-  client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-jXGYrTboZa77VDrq.sm-node.com
+  servername: r-7qgmCGHSQvaxr54C.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
     headers:
       Host: cdn-ca.sm-node.com
-  ws-path: /vmess_ws/smjc/index?ed=8192
-  ws-headers:
-    Host: cdn-ca.sm-node.com
 - name: 美国 高速 cdn 1
   type: vmess
   server: cdncdncdn.aikunapp.com
@@ -338,17 +336,13 @@ proxies:
   cipher: auto
   udp: true
   tls: true
-  client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-f42U0NEzOzjdWDDQ.sm-node.com
+  servername: r-xPD9LYVsXafU25oX.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
     headers:
       Host: cdn-us.sm-node.com
-  ws-path: /vmess_ws/smjc/index?ed=8192
-  ws-headers:
-    Host: cdn-us.sm-node.com
 - name: 加拿大 高速 cdn 2
   type: vless
   server: cdncdncdn.aikunapp.com
@@ -357,18 +351,15 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
+  flow: null
   tls: true
-  client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-DhDnNBSfpinj7mS0.sm-node.com
+  servername: r-6zLQCBDG7TwyfpS3.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
     headers:
       Host: cdn-ca.sm-node.com
-  ws-path: /vless_ws/smjc/index?ed=8192
-  ws-headers:
-    Host: cdn-ca.sm-node.com
 - name: 美国 高速 cdn 2
   type: vless
   server: cdncdncdn.aikunapp.com
@@ -377,50 +368,36 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
+  flow: null
   tls: true
-  client-fingerprint: chrome
   skip-cert-verify: true
-  servername: r-evttn74AooeDqYtt.sm-node.com
+  servername: r-0zzyzjqOVW5Nbd86.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
     headers:
       Host: cdn-us.sm-node.com
-  ws-path: /vless_ws/smjc/index?ed=8192
-  ws-headers:
-    Host: cdn-us.sm-node.com
-- name: 1.5x-韩国-三网优化
-  type: anytls
-  server: krgc.aikunapp.com
-  port: 6001
-  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
-  udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  sni: s0.awsstatic.com
 - name: 香港 原生ip 新协议
   type: anytls
   server: hktddns1.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: www.apple.com
+  skip-cert-verify: true
 - name: 台湾(原生IP) 新协议
   type: anytls
   server: hinetddns1.aikunapp.com
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
+  sni: UdOZltam648w13nJ.cn
   skip-cert-verify: true
-  sni: NelBW5K3eYWAbeU1.cn
 - name: 台湾(原生IP)
   server: hinetddns1.aikunapp.com
   port: 5001
-  sni: xuexi.cn
   skip-cert-verify: true
+  sni: xuexi.cn
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 日本 樱花 新协议
@@ -429,20 +406,19 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
   sni: bootcdn.xuexi.cn
+  skip-cert-verify: true
 proxy-groups:
 - name: 三毛机场
   type: select
   proxies:
-  - 自动选择
-  - 故障转移
-  - 剩余流量：124.83 GB
-  - 距离下次重置剩余：14 天
+  - ♻️ 自动选择
+  - 剩余流量：124.48 GB
+  - 距离下次重置剩余：13 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
+  - 1.5x-韩国-三网优化
   - 2x专线-香港-1
   - 2x专线-香港-2 (新协议)
   - 2x专线-香港-3 (IPv6)
@@ -466,19 +442,21 @@ proxy-groups:
   - 美国 高速 cdn 1
   - 加拿大 高速 cdn 2
   - 美国 高速 cdn 2
-  - 1.5x-韩国-三网优化
   - 香港 原生ip 新协议
   - 台湾(原生IP) 新协议
   - 台湾(原生IP)
   - 日本 樱花 新协议
-- name: 自动选择
+  url: http://www.apple.com/library/test/success.html
+  interval: 1800
+- name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：124.83 GB
-  - 距离下次重置剩余：14 天
+  - 剩余流量：124.48 GB
+  - 距离下次重置剩余：13 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
+  - 1.5x-韩国-三网优化
   - 2x专线-香港-1
   - 2x专线-香港-2 (新协议)
   - 2x专线-香港-3 (IPv6)
@@ -502,51 +480,12 @@ proxy-groups:
   - 美国 高速 cdn 1
   - 加拿大 高速 cdn 2
   - 美国 高速 cdn 2
-  - 1.5x-韩国-三网优化
   - 香港 原生ip 新协议
   - 台湾(原生IP) 新协议
   - 台湾(原生IP)
   - 日本 樱花 新协议
-  url: http://www.gstatic.com/generate_204
-  interval: 86400
-- name: 故障转移
-  type: fallback
-  proxies:
-  - 剩余流量：124.83 GB
-  - 距离下次重置剩余：14 天
-  - 套餐到期：2026-09-01
-  - 美国 pz 电信优化
-  - 美国 rs 新协议
-  - 2x专线-香港-1
-  - 2x专线-香港-2 (新协议)
-  - 2x专线-香港-3 (IPv6)
-  - 2x专线-香港-4 (IPv6)
-  - 2x专线-日本-1
-  - 2x专线-日本-2 (新协议)
-  - 2x专线-日本-3 (IPv6)
-  - 2x专线-日本-4 (IPv6)
-  - 2x专线-新加坡-1
-  - 2x专线-新加坡-2 (新协议)
-  - 2x专线-新加坡-3 (IPv6)
-  - 2x专线-新加坡-4 (IPv6)
-  - 如果很少节点可用，去官网更新软件
-  - 美国 DATASHACK (gpt优化)
-  - 美国 DIRECT1 三网优化
-  - 美国 DIRECT2 三网优化
-  - 加拿大 IPv6
-  - 加拿大 tls
-  - 德国 tls
-  - 加拿大 高速 cdn 1
-  - 美国 高速 cdn 1
-  - 加拿大 高速 cdn 2
-  - 美国 高速 cdn 2
-  - 1.5x-韩国-三网优化
-  - 香港 原生ip 新协议
-  - 台湾(原生IP) 新协议
-  - 台湾(原生IP)
-  - 日本 樱花 新协议
-  url: http://www.gstatic.com/generate_204
-  interval: 7200
+  url: http://www.apple.com/library/test/success.html
+  interval: 1800
 rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,192.168.191.0/24,DIRECT
