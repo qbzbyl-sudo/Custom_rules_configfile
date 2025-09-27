@@ -117,7 +117,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：26.86 GB
+- name: 剩余流量：26.82 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -321,7 +321,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-PK984cQZH0Rws542.sm-node.com
+  servername: r-ClQaM5RElqCH53u7.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -337,7 +337,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-dbVRQRSNBrc3CxP9.sm-node.com
+  servername: r-keh5pW4hSO5pYK46.sm-node.com
   network: ws
   ws-opts:
     path: /vmess_ws/smjc/index?ed=8192
@@ -354,7 +354,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-orHd9XUNVLAO4pxp.sm-node.com
+  servername: r-Kzm169o01NGDWo8M.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -371,7 +371,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-zU8D6vb0myxGbVhd.sm-node.com
+  servername: r-JtcMk3ZGnUr3zFXn.sm-node.com
   network: ws
   ws-opts:
     path: /vless_ws/smjc/index?ed=8192
@@ -391,7 +391,7 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  sni: CG6Xfj73suTaN2x0.cn
+  sni: buqchEcjx9uRalF8.cn
   skip-cert-verify: true
 - name: 台湾(原生IP)
   server: hinetddns1.aikunapp.com
@@ -413,7 +413,7 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 剩余流量：26.86 GB
+  - 剩余流量：26.82 GB
   - 距离下次重置剩余：4 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -451,7 +451,7 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：26.86 GB
+  - 剩余流量：26.82 GB
   - 距离下次重置剩余：4 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
