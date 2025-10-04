@@ -117,7 +117,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：179.39 GB
+- name: 剩余流量：178.08 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -126,7 +126,7 @@ proxies:
   sni: 127.0.0.1
   skip-cert-verify: true
   client-fingerprint: chrome
-- name: 距离下次重置剩余：28 天
+- name: 距离下次重置剩余：27 天
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -321,6 +321,24 @@ proxies:
   sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+- name: 加拿大 tls
+  type: anytls
+  server: 51.79.67.180
+  port: 6001
+  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+  udp: true
+  sni: swcdn.apple.com
+  skip-cert-verify: true
+  client-fingerprint: chrome
+- name: 德国 tls
+  type: anytls
+  server: 54.37.74.147
+  port: 6001
+  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+  udp: true
+  sni: swcdn.apple.com
+  skip-cert-verify: true
+  client-fingerprint: chrome
 - name: 加拿大 高速 cdn 1
   type: vmess
   server: cdncdncdn.aikunapp.com
@@ -331,7 +349,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-aOZURNcf0bGRmE2k.sm-node.com
+  servername: r-EZXJpmt45PJUFZ5l.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -348,7 +366,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-OcRgE826ZopTl0RX.sm-node.com
+  servername: r-2EriZCmjvOexRsHL.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -366,7 +384,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-wrSuNAPbEcBOZPbw.sm-node.com
+  servername: r-qrqelLPQO1lyoX8r.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -384,7 +402,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-RbuzWeKYTObMNs95.sm-node.com
+  servername: r-Wma4D9W6bS2K0JJ5.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -406,7 +424,7 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  sni: 7YjOYGAnWcs5Uj1j.cn
+  sni: BrYhJSZL4vPpk28K.cn
   skip-cert-verify: true
   client-fingerprint: chrome
 - name: 台湾(原生IP)
@@ -430,8 +448,8 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 剩余流量：179.39 GB
-  - 距离下次重置剩余：28 天
+  - 剩余流量：178.08 GB
+  - 距离下次重置剩余：27 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -455,6 +473,8 @@ proxy-groups:
   - 加拿大 hy2
   - 法国 hy2
   - 加拿大 IPv6
+  - 加拿大 tls
+  - 德国 tls
   - 加拿大 高速 cdn 1
   - 美国 高速 cdn 1
   - 加拿大 高速 cdn 2
@@ -468,8 +488,8 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：179.39 GB
-  - 距离下次重置剩余：28 天
+  - 剩余流量：178.08 GB
+  - 距离下次重置剩余：27 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
   - 美国 rs 新协议
@@ -493,6 +513,8 @@ proxy-groups:
   - 加拿大 hy2
   - 法国 hy2
   - 加拿大 IPv6
+  - 加拿大 tls
+  - 德国 tls
   - 加拿大 高速 cdn 1
   - 美国 高速 cdn 1
   - 加拿大 高速 cdn 2
