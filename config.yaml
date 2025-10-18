@@ -117,7 +117,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：20.96 GB
+- name: 剩余流量：20.12 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -349,7 +349,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-vKCjDLMGxb39MkIP.sm-node.com
+  servername: r-BwTjufYZ73z7plyF.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -366,7 +366,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-ZPpDzmEZyueh571E.sm-node.com
+  servername: r-34drRTf21EA4tLAG.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -384,7 +384,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-TssgrcOFhKKzTmNl.sm-node.com
+  servername: r-pzWM6YFv4wLVq8UC.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -402,7 +402,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-2vGSPLbjjFVJidsH.sm-node.com
+  servername: r-F506fuoRLEQ16nC2.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -424,7 +424,7 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  sni: 6UzXR3iyfwgzSliX.cn
+  sni: agwwd92hlG3Q11Ay.cn
   skip-cert-verify: true
   client-fingerprint: chrome
 - name: 台湾(原生IP)
@@ -448,7 +448,7 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 剩余流量：20.96 GB
+  - 剩余流量：20.12 GB
   - 距离下次重置剩余：14 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -488,7 +488,7 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：20.96 GB
+  - 剩余流量：20.12 GB
   - 距离下次重置剩余：14 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -528,9 +528,9 @@ proxy-groups:
 rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,192.168.191.0/24,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
 - DOMAIN-KEYWORD,rhodes-island,DIRECT
 - DOMAIN-KEYWORD,picacomic,三毛机场
-- DOMAIN-KEYWORD,hsex,三毛机场
 - DOMAIN-KEYWORD,dynv6,DIRECT
 - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamcontent.com,DIRECT
@@ -538,6 +538,11 @@ rules:
 - DOMAIN-SUFFIX,steamstatic.com,DIRECT
 - DOMAIN-SUFFIX,steamgames.com,DIRECT
 - DOMAIN-SUFFIX,steampowered.com,DIRECT
+- DOMAIN,media.steampowered.com,DIRECT
+- DOMAIN,content.steampowered.com,DIRECT
+- DOMAIN,client-download.steampowered.com,DIRECT
+- DOMAIN,steamcdn-a.akamaihd.net,DIRECT
+- DOMAIN-SUFFIX,steamserver.net,DIRECT
 - DOMAIN,injections.adguard.org,DIRECT
 - DOMAIN,local.adguard.org,DIRECT
 - IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
