@@ -4,9 +4,9 @@ rules:
   #自定义给规则
   - IP-CIDR,192.168.0.0/16,DIRECT        # 局域网
   - IP-CIDR,192.168.191.0/24,DIRECT      # zerotier虚拟局域网
+  - IP-CIDR,10.0.0.0/8,DIRECT            # easytier虚拟局域网
   - DOMAIN-KEYWORD,rhodes-island,DIRECT
   - DOMAIN-KEYWORD,picacomic,三毛机场
-  - DOMAIN-KEYWORD,hsex,三毛机场
   - DOMAIN-KEYWORD,dynv6,DIRECT           # DDNS
 
 # Steam下载直连规则（关键！添加在这里）
@@ -16,3 +16,12 @@ rules:
   - DOMAIN-SUFFIX,steamstatic.com,DIRECT          # 静态资源
   - DOMAIN-SUFFIX,steamgames.com,DIRECT           # 游戏资源
   - DOMAIN-SUFFIX,steampowered.com,DIRECT         # 补丁下载（可选）
+
+  # ---- Steam 下载服务器直连 ----
+  - DOMAIN,media.steampowered.com,DIRECT
+  - DOMAIN,content.steampowered.com,DIRECT
+  - DOMAIN,client-download.steampowered.com,DIRECT
+  - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
+
+  # ---- Steam 联机服务器直连 ----
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
