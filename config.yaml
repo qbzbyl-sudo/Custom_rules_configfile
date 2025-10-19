@@ -117,7 +117,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：5.56 GB
+- name: 剩余流量：5.28 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -349,7 +349,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-61SacB6br6CTXNbS.sm-node.com
+  servername: r-dDURNXGZmTWt4ZGi.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -366,7 +366,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-J2owEA8CSdzyYbnu.sm-node.com
+  servername: r-GaHtT54jZWulwG0Z.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -384,7 +384,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-Prc4xfC1HkoqGFzb.sm-node.com
+  servername: r-aYI0JxnLDnbBR8QA.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -402,7 +402,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-Xu2EX8HeQYrsIQYU.sm-node.com
+  servername: r-L22LQAIlERFsKzir.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -424,7 +424,7 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  sni: FJXfrLeVVevi7Ihf.cn
+  sni: zFKxk5vEoleu9U0l.cn
   skip-cert-verify: true
   client-fingerprint: chrome
 - name: 台湾(原生IP)
@@ -448,7 +448,7 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 剩余流量：5.56 GB
+  - 剩余流量：5.28 GB
   - 距离下次重置剩余：13 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -488,7 +488,7 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：5.56 GB
+  - 剩余流量：5.28 GB
   - 距离下次重置剩余：13 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
