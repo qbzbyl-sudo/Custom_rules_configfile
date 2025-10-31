@@ -117,7 +117,7 @@ dns:
   - api.bilibili.com
   - a.w.bilicdn1.com
 proxies:
-- name: 剩余流量：139.44 GB
+- name: 剩余流量：135.53 GB
   type: anytls
   server: us-pz.aikunapp.com
   port: 6001
@@ -293,6 +293,13 @@ proxies:
   sni: d1--cn-gotcha204-4.bilivideo.com
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+- name: 德国 hy2
+  server: 51.75.77.164
+  port: 5021
+  skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
+  type: hysteria2
+  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 美国 DIRECT2 三网优化
   server: us-oracle.aikunapp.com
   port: 5001
@@ -301,7 +308,7 @@ proxies:
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 加拿大 hy2
-  server: 51.79.67.180
+  server: 158.69.192.77
   port: 5021
   skip-cert-verify: true
   sni: d1--cn-gotcha204-4.bilivideo.com
@@ -315,7 +322,14 @@ proxies:
   type: hysteria2
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 加拿大 IPv6
-  server: 2607:5300:205:200::3017
+  server: 2607:5300:205:200::7996
+  port: 5021
+  skip-cert-verify: true
+  sni: d1--cn-gotcha204-4.bilivideo.com
+  type: hysteria2
+  password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
+- name: 法国 IPv6
+  server: 2001:41d0:305:2100::3967
   port: 5021
   skip-cert-verify: true
   sni: d1--cn-gotcha204-4.bilivideo.com
@@ -323,7 +337,7 @@ proxies:
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
 - name: 加拿大 tls
   type: anytls
-  server: 51.79.67.180
+  server: 158.69.192.77
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
@@ -332,7 +346,7 @@ proxies:
   client-fingerprint: chrome
 - name: 德国 tls
   type: anytls
-  server: 54.37.74.147
+  server: 51.75.77.164
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
@@ -349,7 +363,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-L0U3RM5ZWexOVkIt.sm-node.com
+  servername: r-a8iWfTYAKmB9Voxa.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -366,7 +380,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: r-3ndkUZ24TXbxyiav.sm-node.com
+  servername: r-cqhpoCn5o0EayzlT.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -384,7 +398,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-5qc08g68HyJ9Dj9U.sm-node.com
+  servername: r-TpMpybjsmAsJ8dwe.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -402,7 +416,7 @@ proxies:
   flow: null
   tls: true
   skip-cert-verify: true
-  servername: r-ITU7YS4XTSugCvBF.sm-node.com
+  servername: r-Dq4hapQ3wYi8RDkT.sm-node.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
@@ -424,7 +438,7 @@ proxies:
   port: 6001
   password: 1e8bb3f1-496f-4084-bb1f-add3d936d9de
   udp: true
-  sni: VLEwTfDSyP9dAiYt.cn
+  sni: hJks0GzrFuvO8zmh.cn
   skip-cert-verify: true
   client-fingerprint: chrome
 - name: 台湾(原生IP)
@@ -448,7 +462,7 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - 剩余流量：139.44 GB
+  - 剩余流量：135.53 GB
   - 距离下次重置剩余：1 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -469,10 +483,12 @@ proxy-groups:
   - 如果很少节点可用，去官网更新软件
   - 美国 DATASHACK (gpt优化)
   - 美国 DIRECT1 三网优化
+  - 德国 hy2
   - 美国 DIRECT2 三网优化
   - 加拿大 hy2
   - 法国 hy2
   - 加拿大 IPv6
+  - 法国 IPv6
   - 加拿大 tls
   - 德国 tls
   - 加拿大 高速 cdn 1
@@ -488,7 +504,7 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 剩余流量：139.44 GB
+  - 剩余流量：135.53 GB
   - 距离下次重置剩余：1 天
   - 套餐到期：2026-09-01
   - 美国 pz 电信优化
@@ -509,10 +525,12 @@ proxy-groups:
   - 如果很少节点可用，去官网更新软件
   - 美国 DATASHACK (gpt优化)
   - 美国 DIRECT1 三网优化
+  - 德国 hy2
   - 美国 DIRECT2 三网优化
   - 加拿大 hy2
   - 法国 hy2
   - 加拿大 IPv6
+  - 法国 IPv6
   - 加拿大 tls
   - 德国 tls
   - 加拿大 高速 cdn 1
