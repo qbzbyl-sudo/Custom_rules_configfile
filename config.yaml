@@ -314,9 +314,8 @@ rules:
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
 - IP-CIDR,43.216.225.225/32,DIRECT,no-resolve
 - IP-CIDR,3.37.16.140/32,DIRECT,no-resolve
-- IP-CIDR,13.115.248.147/32,DIRECT,no-resolve
 - IP-CIDR,54.151.243.254/32,DIRECT,no-resolve
-- IP-CIDR,15.168.189.127/32,DIRECT,no-resolve
+- IP-CIDR,13.115.248.147/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
