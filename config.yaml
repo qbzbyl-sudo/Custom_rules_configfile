@@ -50,42 +50,6 @@ proxies:
   password: d7c29a00-df1d-495a-8765-d0b0749e70ca
   udp: true
   sni: 47.76.247.91
-- name: 🇭🇰香江-D(流量)
-  type: trojan
-  server: cos-cdn-d.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-blank-d.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-blank-d.aliapp.men
-- name: 🇭🇰香江-E(流量)
-  type: trojan
-  server: cos-cdn-e.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-blank-e.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-blank-e.aliapp.men
-- name: 🇭🇰香江-F(流量)
-  type: trojan
-  server: cos-cdn-f.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-blank-f.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-blank-f.aliapp.men
 - name: 🇺🇸西美-C(流量)
   type: trojan
   server: cos-cdn-h.alicdn.win
@@ -226,9 +190,6 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - ❇️白羊座-DGP(流量)
-  - 🇭🇰香江-D(流量)
-  - 🇭🇰香江-E(流量)
-  - 🇭🇰香江-F(流量)
   - 🇺🇸西美-C(流量)
   - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
@@ -247,9 +208,6 @@ proxy-groups:
   type: url-test
   proxies:
   - ❇️白羊座-DGP(流量)
-  - 🇭🇰香江-D(流量)
-  - 🇭🇰香江-E(流量)
-  - 🇭🇰香江-F(流量)
   - 🇺🇸西美-C(流量)
   - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
@@ -285,9 +243,22 @@ rules:
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
 - IP-CIDR,43.217.190.155/32,DIRECT,no-resolve
+- IP-CIDR,172.64.229.236/32,DIRECT,no-resolve
+- IP-CIDR,162.159.152.155/32,DIRECT,no-resolve
+- IP-CIDR,104.18.88.131/32,DIRECT,no-resolve
+- IP-CIDR,162.159.134.175/32,DIRECT,no-resolve
+- IP-CIDR,162.159.134.194/32,DIRECT,no-resolve
+- IP-CIDR,172.64.146.230/32,DIRECT,no-resolve
+- IP-CIDR,104.18.88.205/32,DIRECT,no-resolve
+- IP-CIDR,104.18.43.163/32,DIRECT,no-resolve
+- IP-CIDR,104.18.88.82/32,DIRECT,no-resolve
+- IP-CIDR,104.19.49.214/32,DIRECT,no-resolve
+- IP-CIDR,172.64.146.236/32,DIRECT,no-resolve
+- IP-CIDR,104.18.88.243/32,DIRECT,no-resolve
+- IP-CIDR,162.159.152.207/32,DIRECT,no-resolve
 - IP-CIDR,13.124.223.52/32,DIRECT,no-resolve
 - IP-CIDR,47.128.67.128/32,DIRECT,no-resolve
-- IP-CIDR,18.183.128.98/32,DIRECT,no-resolve
+- IP-CIDR,54.249.57.66/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
