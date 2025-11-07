@@ -98,30 +98,6 @@ proxies:
     path: /api/v1/serve
     headers:
       Host: mms-static-china-error-c.aliapp.men
-- name: 🇸🇬狮城-D(流量)
-  type: trojan
-  server: cos-cdn-d.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-blank-edu-d.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-blank-edu-d.aliapp.men
-- name: 🇸🇬狮城-E(流量)
-  type: trojan
-  server: cos-cdn-z.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-blank-edu-e.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-blank-edu-e.aliapp.men
 - name: 🇺🇸西美-D(流量)
   type: trojan
   server: cos-cdn-j.alicdn.win
@@ -254,8 +230,6 @@ proxy-groups:
   - 🇭🇰香江-E(流量)
   - 🇭🇰香江-F(流量)
   - 🇺🇸西美-C(流量)
-  - 🇸🇬狮城-D(流量)
-  - 🇸🇬狮城-E(流量)
   - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
@@ -277,8 +251,6 @@ proxy-groups:
   - 🇭🇰香江-E(流量)
   - 🇭🇰香江-F(流量)
   - 🇺🇸西美-C(流量)
-  - 🇸🇬狮城-D(流量)
-  - 🇸🇬狮城-E(流量)
   - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
@@ -314,7 +286,6 @@ rules:
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
 - IP-CIDR,43.217.190.155/32,DIRECT,no-resolve
 - IP-CIDR,13.124.223.52/32,DIRECT,no-resolve
-- IP-CIDR,54.249.57.66/32,DIRECT,no-resolve
 - IP-CIDR,47.128.67.128/32,DIRECT,no-resolve
 - IP-CIDR,18.183.128.98/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
