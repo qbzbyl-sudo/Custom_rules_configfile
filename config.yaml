@@ -50,30 +50,6 @@ proxies:
   password: d7c29a00-df1d-495a-8765-d0b0749e70ca
   udp: true
   sni: 47.76.247.91
-- name: 🇺🇸西美-C(流量)
-  type: trojan
-  server: cos-cdn-h.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-c.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-c.aliapp.men
-- name: 🇺🇸西美-D(流量)
-  type: trojan
-  server: cos-cdn-j.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-d.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-d.aliapp.men
 - name: 🇭🇰白羊座-HK(流量)
   type: trojan
   server: hkv6.de180997-0810-4174-8f14-eb8d79d47a0c.4612afe1.demo-chat-airport.com
@@ -109,13 +85,6 @@ proxies:
   password: d7c29a00-df1d-495a-8765-d0b0749e70ca
   udp: true
   sni: 47.76.247.91
-- name: 🇹🇼白羊座-TW(流量)
-  type: trojan
-  server: twb.8b437e21-4951-49e6-9587-3a4be48e9e30.490b11fc.demo-chat-airport.com
-  port: 56806
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: 47.76.247.91
 - name: 🇺🇸白羊座-US(下载)
   type: trojan
   server: tgv6f.026e0cc5-92f4-4605-8e17-0b7e302554a5.26e87e0e.demo-chat-airport.com
@@ -124,104 +93,28 @@ proxies:
   udp: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🇺🇸西美-G(流量)
-  type: trojan
-  server: cos-cdn-l.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-g.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-g.aliapp.men
-- name: 🇺🇸西美-H(流量)
-  type: trojan
-  server: cos-cdn-n.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-h.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-h.aliapp.men
-- name: 🇺🇸西美-K(流量)
-  type: trojan
-  server: cos-cdn-p.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-k.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-k.aliapp.men
-- name: 🇺🇸西美-L(流量)
-  type: trojan
-  server: cos-cdn-r.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-l.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-l.aliapp.men
-- name: 🇺🇸西美-N(流量)
-  type: trojan
-  server: cos-cdn-t.alicdn.win
-  port: 443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: mms-static-china-error-n.aliapp.men
-  network: ws
-  ws-opts:
-    path: /api/v1/serve
-    headers:
-      Host: mms-static-china-error-n.aliapp.men
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - ❇️白羊座-DGP(流量)
-  - 🇺🇸西美-C(流量)
-  - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
   - 🇸🇬白羊座-SG(流量)
   - 🇰🇷白羊座-KR(流量)
   - 🇲🇾白羊座-MY(流量)
-  - 🇹🇼白羊座-TW(流量)
   - 🇺🇸白羊座-US(下载)
-  - 🇺🇸西美-G(流量)
-  - 🇺🇸西美-H(流量)
-  - 🇺🇸西美-K(流量)
-  - 🇺🇸西美-L(流量)
-  - 🇺🇸西美-N(流量)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - ❇️白羊座-DGP(流量)
-  - 🇺🇸西美-C(流量)
-  - 🇺🇸西美-D(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
   - 🇸🇬白羊座-SG(流量)
   - 🇰🇷白羊座-KR(流量)
   - 🇲🇾白羊座-MY(流量)
-  - 🇹🇼白羊座-TW(流量)
   - 🇺🇸白羊座-US(下载)
-  - 🇺🇸西美-G(流量)
-  - 🇺🇸西美-H(流量)
-  - 🇺🇸西美-K(流量)
-  - 🇺🇸西美-L(流量)
-  - 🇺🇸西美-N(流量)
   url: http://www.apple.com/library/test/success.html
   interval: 1800
 rules:
@@ -242,23 +135,22 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
+- IP-CIDR,104.17.31.117/32,DIRECT,no-resolve
 - IP-CIDR,43.217.190.155/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.165/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.138/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.6/32,DIRECT,no-resolve
-- IP-CIDR,172.64.146.156/32,DIRECT,no-resolve
-- IP-CIDR,172.64.229.10/32,DIRECT,no-resolve
-- IP-CIDR,172.64.229.15/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.240/32,DIRECT,no-resolve
-- IP-CIDR,104.16.248.79/32,DIRECT,no-resolve
-- IP-CIDR,172.64.229.233/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.173/32,DIRECT,no-resolve
-- IP-CIDR,162.159.143.182/32,DIRECT,no-resolve
-- IP-CIDR,162.159.134.93/32,DIRECT,no-resolve
+- IP-CIDR,104.18.43.233/32,DIRECT,no-resolve
+- IP-CIDR,104.18.43.70/32,DIRECT,no-resolve
+- IP-CIDR,162.159.143.125/32,DIRECT,no-resolve
+- IP-CIDR,162.159.143.4/32,DIRECT,no-resolve
+- IP-CIDR,162.159.134.186/32,DIRECT,no-resolve
+- IP-CIDR,162.159.143.60/32,DIRECT,no-resolve
+- IP-CIDR,172.64.229.93/32,DIRECT,no-resolve
+- IP-CIDR,162.159.143.122/32,DIRECT,no-resolve
+- IP-CIDR,172.64.229.150/32,DIRECT,no-resolve
+- IP-CIDR,104.18.88.183/32,DIRECT,no-resolve
 - IP-CIDR,13.124.223.52/32,DIRECT,no-resolve
-- IP-CIDR,15.152.71.184/32,DIRECT,no-resolve
+- IP-CIDR,54.249.57.66/32,DIRECT,no-resolve
 - IP-CIDR,47.128.67.128/32,DIRECT,no-resolve
-- IP-CIDR,18.183.128.98/32,DIRECT,no-resolve
+- IP-CIDR,15.152.71.184/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
