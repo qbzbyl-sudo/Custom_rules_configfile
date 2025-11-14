@@ -135,11 +135,11 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,43.216.144.92/32,DIRECT,no-resolve
-- IP-CIDR,3.36.139.90/32,DIRECT,no-resolve
-- IP-CIDR,18.183.56.135/32,DIRECT,no-resolve
-- IP-CIDR,18.141.211.3/32,DIRECT,no-resolve
-- IP-CIDR,56.155.116.54/32,DIRECT,no-resolve
+- IP-CIDR,35.76.111.243/32,DIRECT,no-resolve
+- IP-CIDR,43.216.227.173/32,DIRECT,no-resolve
+- IP-CIDR,3.37.227.208/32,DIRECT,no-resolve
+- IP-CIDR,47.129.124.255/32,DIRECT,no-resolve
+- IP-CIDR,43.207.137.81/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
