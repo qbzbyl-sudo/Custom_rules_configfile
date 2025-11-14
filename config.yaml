@@ -43,7 +43,7 @@ dns:
     - +.facebook.com
     - +.youtube.com
 proxies:
-- name: ❇️白羊座-DGP(流量)
+- name: ❇️白羊座-FGP(流量)
   type: trojan
   server: tgv6a.4eb56bd3-45b8-49c5-a967-a1e497dceb67.23b83910.demo-chat-airport.com
   port: 56806
@@ -98,7 +98,7 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - ❇️白羊座-DGP(流量)
+  - ❇️白羊座-FGP(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
   - 🇸🇬白羊座-SG(流量)
@@ -108,7 +108,7 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - ❇️白羊座-DGP(流量)
+  - ❇️白羊座-FGP(流量)
   - 🇭🇰白羊座-HK(流量)
   - 🇯🇵白羊座-JP(流量)
   - 🇸🇬白羊座-SG(流量)
