@@ -136,11 +136,10 @@ rules:
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
 - IP-CIDR,43.213.39.242/32,DIRECT,no-resolve
-- IP-CIDR,43.216.196.252/32,DIRECT,no-resolve
-- IP-CIDR,3.38.14.227/32,DIRECT,no-resolve
-- IP-CIDR,35.77.2.240/32,DIRECT,no-resolve
-- IP-CIDR,18.142.254.212/32,DIRECT,no-resolve
-- IP-CIDR,54.248.219.70/32,DIRECT,no-resolve
+- IP-CIDR,43.216.213.195/32,DIRECT,no-resolve
+- IP-CIDR,13.125.136.69/32,DIRECT,no-resolve
+- IP-CIDR,13.250.10.83/32,DIRECT,no-resolve
+- IP-CIDR,35.76.27.133/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
