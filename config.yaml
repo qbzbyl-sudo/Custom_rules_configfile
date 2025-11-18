@@ -27,10 +27,12 @@ dns:
   nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
+  - tls://223.6.6.6:853
   fallback:
   - https://223.5.5.5/dns-query
   - https://223.6.6.6/dns-query
   - https://doh.360.cn/dns-query
+  - tls://223.5.5.5:853
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -135,12 +137,12 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,15.165.158.157/32,DIRECT,no-resolve
-- IP-CIDR,43.216.209.121/32,DIRECT,no-resolve
 - IP-CIDR,43.213.39.242/32,DIRECT,no-resolve
-- IP-CIDR,43.207.237.187/32,DIRECT,no-resolve
-- IP-CIDR,122.248.194.158/32,DIRECT,no-resolve
-- IP-CIDR,56.155.138.150/32,DIRECT,no-resolve
+- IP-CIDR,43.216.179.240/32,DIRECT,no-resolve
+- IP-CIDR,3.37.83.141/32,DIRECT,no-resolve
+- IP-CIDR,15.168.176.68/32,DIRECT,no-resolve
+- IP-CIDR,3.1.94.61/32,DIRECT,no-resolve
+- IP-CIDR,13.158.39.13/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
