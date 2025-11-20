@@ -16,34 +16,116 @@ hosts:
   - 120.53.53.53
 dns:
   enable: true
+  listen: 127.0.0.1:1053
   ipv6: true
   default-nameserver:
   - 223.5.5.5
   - 119.29.29.29
-  - 180.184.1.1
+  - 114.114.114.114
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 28.0.0.1/8
   use-hosts: true
   nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
-  - tls://223.6.6.6:853
-  fallback:
-  - https://223.5.5.5/dns-query
-  - https://223.6.6.6/dns-query
   - https://doh.360.cn/dns-query
   - tls://223.5.5.5:853
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-    - gfw
-    ipcidr:
-    - 240.0.0.0/4
-    domain:
-    - +.google.com
-    - +.facebook.com
-    - +.youtube.com
+  fake-ip-filter:
+  - '*.lan'
+  - '*.localdomain'
+  - '*.example'
+  - '*.invalid'
+  - '*.localhost'
+  - '*.test'
+  - '*.local'
+  - '*.home.arpa'
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - '*.time.edu.cn'
+  - '*.ntp.org.cn'
+  - +.pool.ntp.org
+  - time1.cloud.tencent.com
+  - music.163.com
+  - '*.music.163.com'
+  - '*.126.net'
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - '*.kuwo.cn'
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - '*.y.qq.com'
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - '*.xiami.com'
+  - '*.music.migu.cn'
+  - music.migu.cn
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - +.srv.nintendo.net
+  - +.stun.playstation.net
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - +.ipv6.microsoft.com
+  - +.battlenet.com.cn
+  - +.wotgame.cn
+  - +.wggames.cn
+  - +.wowsgame.cn
+  - +.wargaming.net
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - +.stun.*.*
+  - +.stun.*.*.*
+  - +.stun.*.*.*.*
+  - heartbeat.belkin.com
+  - '*.linksys.com'
+  - '*.linksyssmartwifi.com'
+  - '*.router.asus.com'
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - '*.square-enix.com'
+  - '*.finalfantasyxiv.com'
+  - '*.ffxiv.com'
+  - '*.ff14.sdo.com'
+  - ff.dorado.sdo.com
+  - '*.mcdn.bilivideo.cn'
+  - +.media.dssott.com
+  - +.pvp.net
 proxies:
 - name: ❇️白羊座-FGP(流量)
   type: trojan
@@ -87,14 +169,6 @@ proxies:
   password: d7c29a00-df1d-495a-8765-d0b0749e70ca
   udp: true
   sni: 47.76.247.91
-- name: 🇺🇸白羊座-US(下载)
-  type: trojan
-  server: tgv6f.026e0cc5-92f4-4605-8e17-0b7e302554a5.26e87e0e.demo-chat-airport.com
-  port: 8443
-  password: d7c29a00-df1d-495a-8765-d0b0749e70ca
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -106,7 +180,6 @@ proxy-groups:
   - 🇸🇬白羊座-SG(流量)
   - 🇰🇷白羊座-KR(流量)
   - 🇲🇾白羊座-MY(流量)
-  - 🇺🇸白羊座-US(下载)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -116,7 +189,6 @@ proxy-groups:
   - 🇸🇬白羊座-SG(流量)
   - 🇰🇷白羊座-KR(流量)
   - 🇲🇾白羊座-MY(流量)
-  - 🇺🇸白羊座-US(下载)
   url: http://www.apple.com/library/test/success.html
   interval: 1800
 rules:
@@ -137,13 +209,12 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,43.213.39.242/32,DIRECT,no-resolve
-- IP-CIDR,52.74.72.197/32,DIRECT,no-resolve
-- IP-CIDR,43.216.223.123/32,DIRECT,no-resolve
-- IP-CIDR,3.37.62.14/32,DIRECT,no-resolve
-- IP-CIDR,13.208.163.120/32,DIRECT,no-resolve
+- IP-CIDR,52.77.213.9/32,DIRECT,no-resolve
+- IP-CIDR,3.36.43.65/32,DIRECT,no-resolve
+- IP-CIDR,43.216.6.38/32,DIRECT,no-resolve
+- IP-CIDR,43.212.247.95/32,DIRECT,no-resolve
 - IP-CIDR,47.130.133.199/32,DIRECT,no-resolve
-- IP-CIDR,43.206.141.1/32,DIRECT,no-resolve
+- IP-CIDR,13.158.47.236/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
