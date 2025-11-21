@@ -212,7 +212,7 @@ rules:
 - IP-CIDR,43.213.54.164/32,DIRECT,no-resolve
 - IP-CIDR,3.37.204.51/32,DIRECT,no-resolve
 - IP-CIDR,43.216.148.229/32,DIRECT,no-resolve
-- IP-CIDR,35.72.12.89/32,DIRECT,no-resolve
+- IP-CIDR,56.155.120.128/32,DIRECT,no-resolve
 - IP-CIDR,54.254.230.5/32,DIRECT,no-resolve
 - IP-CIDR,18.183.234.13/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
