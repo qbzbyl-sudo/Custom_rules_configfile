@@ -209,6 +209,12 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
+- IP-CIDR,43.212.232.80/32,DIRECT,no-resolve
+- IP-CIDR,13.125.115.139/32,DIRECT,no-resolve
+- IP-CIDR,43.216.135.234/32,DIRECT,no-resolve
+- IP-CIDR,13.113.74.97/32,DIRECT,no-resolve
+- IP-CIDR,18.140.123.255/32,DIRECT,no-resolve
+- IP-CIDR,13.231.149.207/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
