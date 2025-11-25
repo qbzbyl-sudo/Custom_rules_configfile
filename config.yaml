@@ -212,9 +212,8 @@ rules:
 - IP-CIDR,43.212.232.80/32,DIRECT,no-resolve
 - IP-CIDR,56.68.56.119/32,DIRECT,no-resolve
 - IP-CIDR,54.180.227.235/32,DIRECT,no-resolve
-- IP-CIDR,15.168.41.37/32,DIRECT,no-resolve
 - IP-CIDR,13.228.235.75/32,DIRECT,no-resolve
-- IP-CIDR,52.196.144.202/32,DIRECT,no-resolve
+- IP-CIDR,15.168.41.37/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
