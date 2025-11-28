@@ -209,11 +209,11 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,43.213.54.164/32,DIRECT,no-resolve
-- IP-CIDR,15.164.202.242/32,DIRECT,no-resolve
+- IP-CIDR,43.217.248.119/32,DIRECT,no-resolve
+- IP-CIDR,13.209.99.242/32,DIRECT,no-resolve
 - IP-CIDR,43.216.26.24/32,DIRECT,no-resolve
-- IP-CIDR,52.221.237.196/32,DIRECT,no-resolve
-- IP-CIDR,13.231.197.125/32,DIRECT,no-resolve
+- IP-CIDR,54.255.226.246/32,DIRECT,no-resolve
+- IP-CIDR,57.182.250.10/32,DIRECT,no-resolve
 - DOMAIN,nano-github.52iplc.com,DIRECT
 - PROCESS-NAME,air.tv.douyu.android,DIRECT
 - PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
