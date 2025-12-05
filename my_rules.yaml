@@ -15,7 +15,6 @@ rules:
   - DOMAIN-SUFFIX,steamusercontent.com,DIRECT     # 用户内容
   - DOMAIN-SUFFIX,steamstatic.com,DIRECT          # 静态资源
   - DOMAIN-SUFFIX,steamgames.com,DIRECT           # 游戏资源
-  - DOMAIN-SUFFIX,steampowered.com,DIRECT         # 补丁下载（可选）
 
   # ---- Steam 下载服务器直连 ----
   - DOMAIN,media.steampowered.com,DIRECT
