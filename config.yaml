@@ -144,7 +144,6 @@ rules:
 - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
 - DOMAIN-SUFFIX,steamstatic.com,DIRECT
 - DOMAIN-SUFFIX,steamgames.com,DIRECT
-- DOMAIN-SUFFIX,steampowered.com,DIRECT
 - DOMAIN,media.steampowered.com,DIRECT
 - DOMAIN,content.steampowered.com,DIRECT
 - DOMAIN,client-download.steampowered.com,DIRECT
