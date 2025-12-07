@@ -779,7 +779,7 @@ rules:
 - IP-CIDR,192.168.191.0/24,DIRECT
 - IP-CIDR,10.0.0.0/8,DIRECT
 - DOMAIN-KEYWORD,rhodes-island,DIRECT
-- DOMAIN-KEYWORD,picacomic,🚀 节点选择
+- DOMAIN-KEYWORD,picacomic,龙猫云 - TotoroCloud
 - DOMAIN-KEYWORD,dynv6,DIRECT
 - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamcontent.com,DIRECT
