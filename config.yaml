@@ -30,511 +30,518 @@ dns:
 proxies:
 - name: 最新网址：totorocloud.net
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53401
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
-- name: 剩余流量：98.27 GB
+- name: 剩余流量：95.61 GB
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
+  port: 53401
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 距离下次重置剩余：30 天
+  type: trojan
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53401
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 套餐到期：2026-01-07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53401
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53401
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53402
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53403
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53404
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53405
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 06
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53406
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53407
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 08
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53408
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 09
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53409
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 10
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53410
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 11
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53411
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 12
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53412
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 13
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53413
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 14
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53414
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 15
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53415
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 16
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53416
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 17
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53417
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 18
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53418
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 19
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53419
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 香港 20
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53420
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53421
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53422
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53423
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53424
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53425
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 06
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53426
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53427
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 08
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53428
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 09
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53429
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 台湾 10
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtw.lma1b2.com
   port: 53430
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53431
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53432
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53433
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53434
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53435
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 06
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53436
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53437
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 08
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53438
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 09
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53439
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 新加坡 10
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmsg.lma1b2.com
   port: 53440
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53441
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53442
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53443
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53444
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53445
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 06
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53446
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53447
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 08
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53448
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 09
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53449
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 日本 10
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmjp.lma1b2.com
   port: 53450
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53451
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53452
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53453
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53454
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53455
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 06
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53456
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 07
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53457
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 08
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53458
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 09
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53459
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 美国 10
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmus.lma1b2.com
   port: 53460
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 马来西亚 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmmy.lma1b2.com
   port: 53466
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 马来西亚 02
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmmy.lma1b2.com
   port: 53467
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 马来西亚 03
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmmy.lma1b2.com
   port: 53468
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 马来西亚 04
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmmy.lma1b2.com
   port: 53469
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 马来西亚 05
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmmy.lma1b2.com
   port: 53470
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 土耳其 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmtr.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmtr.lma1b2.com
   port: 53496
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: 阿根廷 01
   type: trojan
-  server: lmnode-ixd2fh5v0uq1v7z-lmar.lma1b2.com
+  server: lmnode-ixd3fh2v5uqlv3z-lmar.lma1b2.com
   port: 53498
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
 - name: SS-台湾 01
   type: ss
-  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  server: lmnode-cb01469f.ixd3fh2v5uqlv3z-lmtw.lmsnodes.com
   port: 50023
   cipher: aes-128-gcm
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
 - name: SS-台湾 02
   type: ss
-  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  server: lmnode-cb01469f.ixd3fh2v5uqlv3z-lmtw.lmsnodes.com
   port: 50024
   cipher: aes-128-gcm
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
 - name: SS-台湾 03
   type: ss
-  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  server: lmnode-cb01469f.ixd3fh2v5uqlv3z-lmtw.lmsnodes.com
   port: 50025
   cipher: aes-128-gcm
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
@@ -546,7 +553,8 @@ proxy-groups:
   - 自动选择
   - 故障转移
   - 最新网址：totorocloud.net
-  - 剩余流量：98.27 GB
+  - 剩余流量：95.61 GB
+  - 距离下次重置剩余：30 天
   - 套餐到期：2026-01-07
   - 香港 01
   - 香港 02
@@ -622,7 +630,8 @@ proxy-groups:
   type: url-test
   proxies:
   - 最新网址：totorocloud.net
-  - 剩余流量：98.27 GB
+  - 剩余流量：95.61 GB
+  - 距离下次重置剩余：30 天
   - 套餐到期：2026-01-07
   - 香港 01
   - 香港 02
@@ -700,7 +709,8 @@ proxy-groups:
   type: fallback
   proxies:
   - 最新网址：totorocloud.net
-  - 剩余流量：98.27 GB
+  - 剩余流量：95.61 GB
+  - 距离下次重置剩余：30 天
   - 套餐到期：2026-01-07
   - 香港 01
   - 香港 02
