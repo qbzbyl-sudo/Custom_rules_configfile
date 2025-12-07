@@ -1,137 +1,779 @@
 mixed-port: 7890
 allow-lan: true
-unified-delay: true
-tcp-concurrent: true
-ipv6: true
 bind-address: '*'
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
-hosts:
-  dns.alidns.com:
-  - 223.5.5.5
-  - 2400:3200::1
-  doh.pub:
-  - 1.12.12.12
-  - 120.53.53.53
 dns:
-  enable: true
-  listen: 127.0.0.1:1053
+  enable: false
   ipv6: true
   default-nameserver:
   - 223.5.5.5
   - 119.29.29.29
-  - 114.114.114.114
+  - 8.8.8.8
   enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
+  fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
-  - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
-  - https://doh.360.cn/dns-query
-  - tls://223.5.5.5:853
-  fake-ip-filter:
-  - '*.lan'
-  - '*.localdomain'
-  - '*.example'
-  - '*.invalid'
-  - '*.localhost'
-  - '*.test'
-  - '*.local'
-  - '*.home.arpa'
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - '*.time.edu.cn'
-  - '*.ntp.org.cn'
-  - +.pool.ntp.org
-  - time1.cloud.tencent.com
-  - music.163.com
-  - '*.music.163.com'
-  - '*.126.net'
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - '*.kuwo.cn'
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - '*.y.qq.com'
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - '*.xiami.com'
-  - '*.music.migu.cn'
-  - music.migu.cn
-  - +.msftconnecttest.com
-  - +.msftncsi.com
-  - msftconnecttest.com
-  - msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - +.srv.nintendo.net
-  - +.stun.playstation.net
-  - xbox.*.microsoft.com
-  - xnotify.xboxlive.com
-  - +.ipv6.microsoft.com
-  - +.battlenet.com.cn
-  - +.wotgame.cn
-  - +.wggames.cn
-  - +.wowsgame.cn
-  - +.wargaming.net
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - +.stun.*.*
-  - +.stun.*.*.*
-  - +.stun.*.*.*.*
-  - heartbeat.belkin.com
-  - '*.linksys.com'
-  - '*.linksyssmartwifi.com'
-  - '*.router.asus.com'
-  - mesu.apple.com
-  - swscan.apple.com
-  - swquery.apple.com
-  - swdownload.apple.com
-  - swcdn.apple.com
-  - swdist.apple.com
-  - lens.l.google.com
-  - stun.l.google.com
-  - '*.square-enix.com'
-  - '*.finalfantasyxiv.com'
-  - '*.ffxiv.com'
-  - '*.ff14.sdo.com'
-  - ff.dorado.sdo.com
-  - '*.mcdn.bilivideo.cn'
-  - +.media.dssott.com
-  - +.pvp.net
-proxies: []
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies:
+- name: 最新网址：totorocloud.net
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53401
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 剩余流量：99.99 GB
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53401
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 套餐到期：2026-01-07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53401
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53401
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53402
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53403
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53404
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53405
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 06
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53406
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53407
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 08
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53408
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 09
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53409
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 10
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53410
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 11
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53411
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 12
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53412
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 13
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53413
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 14
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53414
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 15
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53415
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 16
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53416
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 17
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53417
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 18
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53418
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 19
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53419
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 香港 20
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmhk.lma1b2.com
+  port: 53420
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53421
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53422
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53423
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53424
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53425
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 06
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53426
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53427
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 08
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53428
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 09
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53429
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 台湾 10
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtw.lma1b2.com
+  port: 53430
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53431
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53432
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53433
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53434
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53435
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 06
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53436
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53437
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 08
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53438
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 09
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53439
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 新加坡 10
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmsg.lma1b2.com
+  port: 53440
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53441
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53442
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53443
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53444
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53445
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 06
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53446
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53447
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 08
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53448
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 09
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53449
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 日本 10
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmjp.lma1b2.com
+  port: 53450
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53451
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53452
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53453
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53454
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53455
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 06
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53456
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 07
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53457
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 08
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53458
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 09
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53459
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 美国 10
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmus.lma1b2.com
+  port: 53460
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 马来西亚 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  port: 53466
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 马来西亚 02
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  port: 53467
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 马来西亚 03
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  port: 53468
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 马来西亚 04
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  port: 53469
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 马来西亚 05
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmmy.lma1b2.com
+  port: 53470
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 土耳其 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmtr.lma1b2.com
+  port: 53496
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: 阿根廷 01
+  type: trojan
+  server: lmnode-ixd2fh5v0uq1v7z-lmar.lma1b2.com
+  port: 53498
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+  skip-cert-verify: true
+- name: SS-台湾 01
+  type: ss
+  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  port: 50023
+  cipher: aes-128-gcm
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+- name: SS-台湾 02
+  type: ss
+  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  port: 50024
+  cipher: aes-128-gcm
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
+- name: SS-台湾 03
+  type: ss
+  server: lmnode-e1a96bbd.ixd2fh5v0uq1v7z-lmtw.lmsnodes.com
+  port: 50025
+  cipher: aes-128-gcm
+  password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
+  udp: true
 proxy-groups:
-- name: 🚀 节点选择
+- name: 龙猫云 - TotoroCloud
   type: select
   proxies:
-  - ♻️ 自动选择
+  - 自动选择
+  - 故障转移
+  - 最新网址：totorocloud.net
+  - 剩余流量：99.99 GB
+  - 套餐到期：2026-01-07
+  - 香港 01
+  - 香港 02
+  - 香港 03
+  - 香港 04
+  - 香港 05
+  - 香港 06
+  - 香港 07
+  - 香港 08
+  - 香港 09
+  - 香港 10
+  - 香港 11
+  - 香港 12
+  - 香港 13
+  - 香港 14
+  - 香港 15
+  - 香港 16
+  - 香港 17
+  - 香港 18
+  - 香港 19
+  - 香港 20
+  - 台湾 01
+  - 台湾 02
+  - 台湾 03
+  - 台湾 04
+  - 台湾 05
+  - 台湾 06
+  - 台湾 07
+  - 台湾 08
+  - 台湾 09
+  - 台湾 10
+  - 新加坡 01
+  - 新加坡 02
+  - 新加坡 03
+  - 新加坡 04
+  - 新加坡 05
+  - 新加坡 06
+  - 新加坡 07
+  - 新加坡 08
+  - 新加坡 09
+  - 新加坡 10
+  - 日本 01
+  - 日本 02
+  - 日本 03
+  - 日本 04
+  - 日本 05
+  - 日本 06
+  - 日本 07
+  - 日本 08
+  - 日本 09
+  - 日本 10
+  - 美国 01
+  - 美国 02
+  - 美国 03
+  - 美国 04
+  - 美国 05
+  - 美国 06
+  - 美国 07
+  - 美国 08
+  - 美国 09
+  - 美国 10
+  - 马来西亚 01
+  - 马来西亚 02
+  - 马来西亚 03
+  - 马来西亚 04
+  - 马来西亚 05
+  - 土耳其 01
+  - 阿根廷 01
+  - SS-台湾 01
+  - SS-台湾 02
+  - SS-台湾 03
+- name: 自动选择
+  type: url-test
+  proxies:
+  - 最新网址：totorocloud.net
+  - 剩余流量：99.99 GB
+  - 套餐到期：2026-01-07
+  - 香港 01
+  - 香港 02
+  - 香港 03
+  - 香港 04
+  - 香港 05
+  - 香港 06
+  - 香港 07
+  - 香港 08
+  - 香港 09
+  - 香港 10
+  - 香港 11
+  - 香港 12
+  - 香港 13
+  - 香港 14
+  - 香港 15
+  - 香港 16
+  - 香港 17
+  - 香港 18
+  - 香港 19
+  - 香港 20
+  - 台湾 01
+  - 台湾 02
+  - 台湾 03
+  - 台湾 04
+  - 台湾 05
+  - 台湾 06
+  - 台湾 07
+  - 台湾 08
+  - 台湾 09
+  - 台湾 10
+  - 新加坡 01
+  - 新加坡 02
+  - 新加坡 03
+  - 新加坡 04
+  - 新加坡 05
+  - 新加坡 06
+  - 新加坡 07
+  - 新加坡 08
+  - 新加坡 09
+  - 新加坡 10
+  - 日本 01
+  - 日本 02
+  - 日本 03
+  - 日本 04
+  - 日本 05
+  - 日本 06
+  - 日本 07
+  - 日本 08
+  - 日本 09
+  - 日本 10
+  - 美国 01
+  - 美国 02
+  - 美国 03
+  - 美国 04
+  - 美国 05
+  - 美国 06
+  - 美国 07
+  - 美国 08
+  - 美国 09
+  - 美国 10
+  - 马来西亚 01
+  - 马来西亚 02
+  - 马来西亚 03
+  - 马来西亚 04
+  - 马来西亚 05
+  - 土耳其 01
+  - 阿根廷 01
+  - SS-台湾 01
+  - SS-台湾 02
+  - SS-台湾 03
+  url: http://www.gstatic.com/generate_204
+  interval: 86400
+- name: 故障转移
+  type: fallback
+  proxies:
+  - 最新网址：totorocloud.net
+  - 剩余流量：99.99 GB
+  - 套餐到期：2026-01-07
+  - 香港 01
+  - 香港 02
+  - 香港 03
+  - 香港 04
+  - 香港 05
+  - 香港 06
+  - 香港 07
+  - 香港 08
+  - 香港 09
+  - 香港 10
+  - 香港 11
+  - 香港 12
+  - 香港 13
+  - 香港 14
+  - 香港 15
+  - 香港 16
+  - 香港 17
+  - 香港 18
+  - 香港 19
+  - 香港 20
+  - 台湾 01
+  - 台湾 02
+  - 台湾 03
+  - 台湾 04
+  - 台湾 05
+  - 台湾 06
+  - 台湾 07
+  - 台湾 08
+  - 台湾 09
+  - 台湾 10
+  - 新加坡 01
+  - 新加坡 02
+  - 新加坡 03
+  - 新加坡 04
+  - 新加坡 05
+  - 新加坡 06
+  - 新加坡 07
+  - 新加坡 08
+  - 新加坡 09
+  - 新加坡 10
+  - 日本 01
+  - 日本 02
+  - 日本 03
+  - 日本 04
+  - 日本 05
+  - 日本 06
+  - 日本 07
+  - 日本 08
+  - 日本 09
+  - 日本 10
+  - 美国 01
+  - 美国 02
+  - 美国 03
+  - 美国 04
+  - 美国 05
+  - 美国 06
+  - 美国 07
+  - 美国 08
+  - 美国 09
+  - 美国 10
+  - 马来西亚 01
+  - 马来西亚 02
+  - 马来西亚 03
+  - 马来西亚 04
+  - 马来西亚 05
+  - 土耳其 01
+  - 阿根廷 01
+  - SS-台湾 01
+  - SS-台湾 02
+  - SS-台湾 03
+  url: http://www.gstatic.com/generate_204
+  interval: 7200
 rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,192.168.191.0/24,DIRECT
@@ -149,62 +791,25 @@ rules:
 - DOMAIN,client-download.steampowered.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-- DOMAIN,nano-github.52iplc.com,DIRECT
-- PROCESS-NAME,air.tv.douyu.android,DIRECT
-- PROCESS-NAME,com.mt.mtxx.mtxx,DIRECT
-- PROCESS-NAME,eg.android.AlipayGphone,DIRECT
-- PROCESS-NAME,com.tencent.mm,DIRECT
-- PROCESS-NAME,com.tencent.mobileqq,DIRECT
-- PROCESS-NAME,xingin.xhs,DIRECT
-- PROCESS-NAME,zhihu.android,DIRECT
-- PROCESS-NAME,com.ss.android.ugc.aweme,DIRECT
-- PROCESS-NAME,taobao.idlefish,DIRECT
-- PROCESS-NAME,com.taobao.taobao,DIRECT
-- PROCESS-NAME,com.wangyin.payment,DIRECT
-- PROCESS-NAME,com.jingdong.app.mall,DIRECT
-- PROCESS-NAME,xunmeng.pinduoduo,DIRECT
-- PROCESS-NAME,com.sankuai.meituan,DIRECT
-- PROCESS-NAME,com.sankuai.meituan.takeoutnew,DIRECT
-- PROCESS-NAME,com.xunlei.downloadprovider,DIRECT
-- PROCESS-NAME,me.ele,DIRECT
-- PROCESS-NAME,com.autonavi.minimap,DIRECT
-- PROCESS-NAME,com.baidu.BaiduMap,DIRECT
-- PROCESS-NAME,com.tencent.qqmusic,DIRECT
-- PROCESS-NAME,com.netease.cloudmusic,DIRECT
-- PROCESS-NAME,com.tencent.qqlive,DIRECT
-- PROCESS-NAME,tv.danmaku.bili,DIRECT
-- PROCESS-NAME,com.qiyi.video,DIRECT
-- PROCESS-NAME,com.netease.cc,DIRECT
-- PROCESS-NAME,com.duowan.kiwi,DIRECT
-- PROCESS-NAME,com.alibaba.android.rimet,DIRECT
-- PROCESS-NAME,com.tmall.wireless,DIRECT
-- PROCESS-NAME,com.sina.weibo,DIRECT
-- PROCESS-NAME,com.sdu.didi.psnger,DIRECT
-- PROCESS-NAME,com.baidu.searchbox,DIRECT
-- PROCESS-NAME,com.sohu.inputmethod.sogou,DIRECT
-- PROCESS-NAME,com.baidu.input,DIRECT
-- PROCESS-NAME,com.qidian.QDReader,DIRECT
-- PROCESS-NAME,com.chaozh.iReaderFree,DIRECT
-- PROCESS-NAME,com.kmxs.reader,DIRECT
-- DOMAIN-SUFFIX,services.googleapis.cn,🚀 节点选择
-- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
+- DOMAIN,lmdyapiv1.lmspeedapp.com,DIRECT
+- DOMAIN-SUFFIX,services.googleapis.cn,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,龙猫云 - TotoroCloud
 - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
 - DOMAIN,safebrowsing.googleapis.com,DIRECT
-- DOMAIN,developer.apple.com,🚀 节点选择
-- DOMAIN-SUFFIX,digicert.com,🚀 节点选择
-- DOMAIN,ocsp.apple.com,🚀 节点选择
-- DOMAIN,ocsp.comodoca.com,🚀 节点选择
-- DOMAIN,ocsp.usertrust.com,🚀 节点选择
-- DOMAIN,ocsp.sectigo.com,🚀 节点选择
-- DOMAIN,ocsp.verisign.net,🚀 节点选择
-- DOMAIN-SUFFIX,apple-dns.net,🚀 节点选择
-- DOMAIN,testflight.apple.com,🚀 节点选择
-- DOMAIN,sandbox.itunes.apple.com,🚀 节点选择
-- DOMAIN,itunes.apple.com,🚀 节点选择
-- DOMAIN-SUFFIX,apps.apple.com,🚀 节点选择
-- DOMAIN-SUFFIX,blobstore.apple.com,🚀 节点选择
-- DOMAIN,cvws.icloud-content.com,🚀 节点选择
+- DOMAIN,developer.apple.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,digicert.com,龙猫云 - TotoroCloud
+- DOMAIN,ocsp.apple.com,龙猫云 - TotoroCloud
+- DOMAIN,ocsp.comodoca.com,龙猫云 - TotoroCloud
+- DOMAIN,ocsp.usertrust.com,龙猫云 - TotoroCloud
+- DOMAIN,ocsp.sectigo.com,龙猫云 - TotoroCloud
+- DOMAIN,ocsp.verisign.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,apple-dns.net,龙猫云 - TotoroCloud
+- DOMAIN,testflight.apple.com,龙猫云 - TotoroCloud
+- DOMAIN,sandbox.itunes.apple.com,龙猫云 - TotoroCloud
+- DOMAIN,itunes.apple.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,apps.apple.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blobstore.apple.com,龙猫云 - TotoroCloud
+- DOMAIN,cvws.icloud-content.com,龙猫云 - TotoroCloud
 - DOMAIN-SUFFIX,mzstatic.com,DIRECT
 - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
 - DOMAIN-SUFFIX,icloud.com,DIRECT
@@ -221,7 +826,6 @@ rules:
 - DOMAIN-SUFFIX,apple.com,DIRECT
 - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
 - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
-- DOMAIN,cn.bing.com,DIRECT
 - DOMAIN-SUFFIX,126.com,DIRECT
 - DOMAIN-SUFFIX,126.net,DIRECT
 - DOMAIN-SUFFIX,127.net,DIRECT
@@ -347,47 +951,20 @@ rules:
 - DOMAIN-SUFFIX,zhimg.com,DIRECT
 - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
 - DOMAIN-SUFFIX,zoho.com,DIRECT
-- DOMAIN-SUFFIX,api.pandalive.co.kr,DIRECT
-- DOMAIN,steamcdn-a.akamaihd.net,DIRECT
-- DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
-- DOMAIN-SUFFIX,steamserver.net,DIRECT
-- IP-CIDR,45.121.184.0/24,DIRECT
-- IP-CIDR,103.10.124.0/23,DIRECT
-- IP-CIDR,103.28.54.0/24,DIRECT
-- IP-CIDR,146.66.152.0/24,DIRECT
-- IP-CIDR,146.66.155.0/24,DIRECT
-- IP-CIDR,153.254.86.0/24,DIRECT
-- IP-CIDR,155.133.224.0/22,DIRECT
-- IP-CIDR,155.133.230.0/24,DIRECT
-- IP-CIDR,155.133.232.0/23,DIRECT
-- IP-CIDR,155.133.234.0/24,DIRECT
-- IP-CIDR,155.133.236.0/22,DIRECT
-- IP-CIDR,155.133.240.0/23,DIRECT
-- IP-CIDR,155.133.244.0/23,DIRECT
-- IP-CIDR,155.133.246.0/24,DIRECT
-- IP-CIDR,155.133.248.0/21,DIRECT
-- IP-CIDR,162.254.192.0/21,DIRECT
-- IP-CIDR,185.25.182.0/23,DIRECT
-- IP-CIDR,190.217.32.0/22,DIRECT
-- IP-CIDR,192.69.96.0/22,DIRECT
-- IP-CIDR,205.196.6.0/24,DIRECT
-- IP-CIDR,208.64.200.0/22,DIRECT
-- IP-CIDR,208.78.164.0/22,DIRECT
-- IP-CIDR,205.185.194.0/24,DIRECT
-- DOMAIN-KEYWORD,amazon,🚀 节点选择
-- DOMAIN-KEYWORD,google,🚀 节点选择
-- DOMAIN-KEYWORD,gmail,🚀 节点选择
-- DOMAIN-KEYWORD,youtube,🚀 节点选择
-- DOMAIN-KEYWORD,facebook,🚀 节点选择
-- DOMAIN-SUFFIX,fb.me,🚀 节点选择
-- DOMAIN-SUFFIX,fbcdn.net,🚀 节点选择
-- DOMAIN-KEYWORD,twitter,🚀 节点选择
-- DOMAIN-KEYWORD,instagram,🚀 节点选择
-- DOMAIN-KEYWORD,dropbox,🚀 节点选择
-- DOMAIN-SUFFIX,twimg.com,🚀 节点选择
-- DOMAIN-KEYWORD,blogspot,🚀 节点选择
-- DOMAIN-SUFFIX,youtu.be,🚀 节点选择
-- DOMAIN-KEYWORD,whatsapp,🚀 节点选择
+- DOMAIN-KEYWORD,amazon,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,google,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,gmail,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,youtube,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,facebook,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fb.me,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fbcdn.net,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,twitter,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,instagram,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,dropbox,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,twimg.com,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,blogspot,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,youtu.be,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,whatsapp,龙猫云 - TotoroCloud
 - DOMAIN-KEYWORD,admarvel,REJECT
 - DOMAIN-KEYWORD,admaster,REJECT
 - DOMAIN-KEYWORD,adsage,REJECT
@@ -415,304 +992,304 @@ rules:
 - DOMAIN-SUFFIX,vungle.com,REJECT
 - DOMAIN-KEYWORD,wlmonitor,REJECT
 - DOMAIN-KEYWORD,zjtoolbar,REJECT
-- DOMAIN-SUFFIX,9to5mac.com,🚀 节点选择
-- DOMAIN-SUFFIX,abpchina.org,🚀 节点选择
-- DOMAIN-SUFFIX,adblockplus.org,🚀 节点选择
-- DOMAIN-SUFFIX,adobe.com,🚀 节点选择
-- DOMAIN-SUFFIX,akamaized.net,🚀 节点选择
-- DOMAIN-SUFFIX,alfredapp.com,🚀 节点选择
-- DOMAIN-SUFFIX,amplitude.com,🚀 节点选择
-- DOMAIN-SUFFIX,ampproject.org,🚀 节点选择
-- DOMAIN-SUFFIX,android.com,🚀 节点选择
-- DOMAIN-SUFFIX,angularjs.org,🚀 节点选择
-- DOMAIN-SUFFIX,aolcdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,apkpure.com,🚀 节点选择
-- DOMAIN-SUFFIX,appledaily.com,🚀 节点选择
-- DOMAIN-SUFFIX,appshopper.com,🚀 节点选择
-- DOMAIN-SUFFIX,appspot.com,🚀 节点选择
-- DOMAIN-SUFFIX,arcgis.com,🚀 节点选择
-- DOMAIN-SUFFIX,archive.org,🚀 节点选择
-- DOMAIN-SUFFIX,armorgames.com,🚀 节点选择
-- DOMAIN-SUFFIX,aspnetcdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,att.com,🚀 节点选择
-- DOMAIN-SUFFIX,awsstatic.com,🚀 节点选择
-- DOMAIN-SUFFIX,azureedge.net,🚀 节点选择
-- DOMAIN-SUFFIX,azurewebsites.net,🚀 节点选择
-- DOMAIN-SUFFIX,bing.com,🚀 节点选择
-- DOMAIN-SUFFIX,bintray.com,🚀 节点选择
-- DOMAIN-SUFFIX,bit.com,🚀 节点选择
-- DOMAIN-SUFFIX,bit.ly,🚀 节点选择
-- DOMAIN-SUFFIX,bitbucket.org,🚀 节点选择
-- DOMAIN-SUFFIX,bjango.com,🚀 节点选择
-- DOMAIN-SUFFIX,bkrtx.com,🚀 节点选择
-- DOMAIN-SUFFIX,blog.com,🚀 节点选择
-- DOMAIN-SUFFIX,blogcdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,blogger.com,🚀 节点选择
-- DOMAIN-SUFFIX,blogsmithmedia.com,🚀 节点选择
-- DOMAIN-SUFFIX,blogspot.com,🚀 节点选择
-- DOMAIN-SUFFIX,blogspot.hk,🚀 节点选择
-- DOMAIN-SUFFIX,bloomberg.com,🚀 节点选择
-- DOMAIN-SUFFIX,box.com,🚀 节点选择
-- DOMAIN-SUFFIX,box.net,🚀 节点选择
-- DOMAIN-SUFFIX,cachefly.net,🚀 节点选择
-- DOMAIN-SUFFIX,chromium.org,🚀 节点选择
-- DOMAIN-SUFFIX,cl.ly,🚀 节点选择
-- DOMAIN-SUFFIX,cloudflare.com,🚀 节点选择
-- DOMAIN-SUFFIX,cloudfront.net,🚀 节点选择
-- DOMAIN-SUFFIX,cloudmagic.com,🚀 节点选择
-- DOMAIN-SUFFIX,cmail19.com,🚀 节点选择
-- DOMAIN-SUFFIX,cnet.com,🚀 节点选择
-- DOMAIN-SUFFIX,cocoapods.org,🚀 节点选择
-- DOMAIN-SUFFIX,comodoca.com,🚀 节点选择
-- DOMAIN-SUFFIX,crashlytics.com,🚀 节点选择
-- DOMAIN-SUFFIX,culturedcode.com,🚀 节点选择
-- DOMAIN-SUFFIX,d.pr,🚀 节点选择
-- DOMAIN-SUFFIX,danilo.to,🚀 节点选择
-- DOMAIN-SUFFIX,dayone.me,🚀 节点选择
-- DOMAIN-SUFFIX,db.tt,🚀 节点选择
-- DOMAIN-SUFFIX,deskconnect.com,🚀 节点选择
-- DOMAIN-SUFFIX,disq.us,🚀 节点选择
-- DOMAIN-SUFFIX,disqus.com,🚀 节点选择
-- DOMAIN-SUFFIX,disquscdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,dnsimple.com,🚀 节点选择
-- DOMAIN-SUFFIX,docker.com,🚀 节点选择
-- DOMAIN-SUFFIX,dribbble.com,🚀 节点选择
-- DOMAIN-SUFFIX,droplr.com,🚀 节点选择
-- DOMAIN-SUFFIX,duckduckgo.com,🚀 节点选择
-- DOMAIN-SUFFIX,dueapp.com,🚀 节点选择
-- DOMAIN-SUFFIX,dytt8.net,🚀 节点选择
-- DOMAIN-SUFFIX,edgecastcdn.net,🚀 节点选择
-- DOMAIN-SUFFIX,edgekey.net,🚀 节点选择
-- DOMAIN-SUFFIX,edgesuite.net,🚀 节点选择
-- DOMAIN-SUFFIX,engadget.com,🚀 节点选择
-- DOMAIN-SUFFIX,entrust.net,🚀 节点选择
-- DOMAIN-SUFFIX,eurekavpt.com,🚀 节点选择
-- DOMAIN-SUFFIX,evernote.com,🚀 节点选择
-- DOMAIN-SUFFIX,fabric.io,🚀 节点选择
-- DOMAIN-SUFFIX,fast.com,🚀 节点选择
-- DOMAIN-SUFFIX,fastly.net,🚀 节点选择
-- DOMAIN-SUFFIX,fc2.com,🚀 节点选择
-- DOMAIN-SUFFIX,feedburner.com,🚀 节点选择
-- DOMAIN-SUFFIX,feedly.com,🚀 节点选择
-- DOMAIN-SUFFIX,feedsportal.com,🚀 节点选择
-- DOMAIN-SUFFIX,fiftythree.com,🚀 节点选择
-- DOMAIN-SUFFIX,firebaseio.com,🚀 节点选择
-- DOMAIN-SUFFIX,flexibits.com,🚀 节点选择
-- DOMAIN-SUFFIX,flickr.com,🚀 节点选择
-- DOMAIN-SUFFIX,flipboard.com,🚀 节点选择
-- DOMAIN-SUFFIX,g.co,🚀 节点选择
-- DOMAIN-SUFFIX,gabia.net,🚀 节点选择
-- DOMAIN-SUFFIX,geni.us,🚀 节点选择
-- DOMAIN-SUFFIX,gfx.ms,🚀 节点选择
-- DOMAIN-SUFFIX,ggpht.com,🚀 节点选择
-- DOMAIN-SUFFIX,ghostnoteapp.com,🚀 节点选择
-- DOMAIN-SUFFIX,git.io,🚀 节点选择
-- DOMAIN-KEYWORD,github,🚀 节点选择
-- DOMAIN-SUFFIX,globalsign.com,🚀 节点选择
-- DOMAIN-SUFFIX,gmodules.com,🚀 节点选择
-- DOMAIN-SUFFIX,godaddy.com,🚀 节点选择
-- DOMAIN-SUFFIX,golang.org,🚀 节点选择
-- DOMAIN-SUFFIX,gongm.in,🚀 节点选择
-- DOMAIN-SUFFIX,goo.gl,🚀 节点选择
-- DOMAIN-SUFFIX,goodreaders.com,🚀 节点选择
-- DOMAIN-SUFFIX,goodreads.com,🚀 节点选择
-- DOMAIN-SUFFIX,gravatar.com,🚀 节点选择
-- DOMAIN-SUFFIX,gstatic.com,🚀 节点选择
-- DOMAIN-SUFFIX,gvt0.com,🚀 节点选择
-- DOMAIN-SUFFIX,hockeyapp.net,🚀 节点选择
-- DOMAIN-SUFFIX,hotmail.com,🚀 节点选择
-- DOMAIN-SUFFIX,icons8.com,🚀 节点选择
-- DOMAIN-SUFFIX,ifixit.com,🚀 节点选择
-- DOMAIN-SUFFIX,ift.tt,🚀 节点选择
-- DOMAIN-SUFFIX,ifttt.com,🚀 节点选择
-- DOMAIN-SUFFIX,iherb.com,🚀 节点选择
-- DOMAIN-SUFFIX,imageshack.us,🚀 节点选择
-- DOMAIN-SUFFIX,img.ly,🚀 节点选择
-- DOMAIN-SUFFIX,imgur.com,🚀 节点选择
-- DOMAIN-SUFFIX,imore.com,🚀 节点选择
-- DOMAIN-SUFFIX,instapaper.com,🚀 节点选择
-- DOMAIN-SUFFIX,ipn.li,🚀 节点选择
-- DOMAIN-SUFFIX,is.gd,🚀 节点选择
-- DOMAIN-SUFFIX,issuu.com,🚀 节点选择
-- DOMAIN-SUFFIX,itgonglun.com,🚀 节点选择
-- DOMAIN-SUFFIX,itun.es,🚀 节点选择
-- DOMAIN-SUFFIX,ixquick.com,🚀 节点选择
-- DOMAIN-SUFFIX,j.mp,🚀 节点选择
-- DOMAIN-SUFFIX,js.revsci.net,🚀 节点选择
-- DOMAIN-SUFFIX,jshint.com,🚀 节点选择
-- DOMAIN-SUFFIX,jtvnw.net,🚀 节点选择
-- DOMAIN-SUFFIX,justgetflux.com,🚀 节点选择
-- DOMAIN-SUFFIX,kat.cr,🚀 节点选择
-- DOMAIN-SUFFIX,klip.me,🚀 节点选择
-- DOMAIN-SUFFIX,libsyn.com,🚀 节点选择
-- DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
-- DOMAIN-SUFFIX,line-apps.com,🚀 节点选择
-- DOMAIN-SUFFIX,linode.com,🚀 节点选择
-- DOMAIN-SUFFIX,lithium.com,🚀 节点选择
-- DOMAIN-SUFFIX,littlehj.com,🚀 节点选择
-- DOMAIN-SUFFIX,live.com,🚀 节点选择
-- DOMAIN-SUFFIX,live.net,🚀 节点选择
-- DOMAIN-SUFFIX,livefilestore.com,🚀 节点选择
-- DOMAIN-SUFFIX,llnwd.net,🚀 节点选择
-- DOMAIN-SUFFIX,macid.co,🚀 节点选择
-- DOMAIN-SUFFIX,macromedia.com,🚀 节点选择
-- DOMAIN-SUFFIX,macrumors.com,🚀 节点选择
-- DOMAIN-SUFFIX,mashable.com,🚀 节点选择
-- DOMAIN-SUFFIX,mathjax.org,🚀 节点选择
-- DOMAIN-SUFFIX,medium.com,🚀 节点选择
-- DOMAIN-SUFFIX,mega.co.nz,🚀 节点选择
-- DOMAIN-SUFFIX,mega.nz,🚀 节点选择
-- DOMAIN-SUFFIX,megaupload.com,🚀 节点选择
-- DOMAIN-SUFFIX,microsofttranslator.com,🚀 节点选择
-- DOMAIN-SUFFIX,mindnode.com,🚀 节点选择
-- DOMAIN-SUFFIX,mobile01.com,🚀 节点选择
-- DOMAIN-SUFFIX,modmyi.com,🚀 节点选择
-- DOMAIN-SUFFIX,msedge.net,🚀 节点选择
-- DOMAIN-SUFFIX,myfontastic.com,🚀 节点选择
-- DOMAIN-SUFFIX,name.com,🚀 节点选择
-- DOMAIN-SUFFIX,nextmedia.com,🚀 节点选择
-- DOMAIN-SUFFIX,nsstatic.net,🚀 节点选择
-- DOMAIN-SUFFIX,nssurge.com,🚀 节点选择
-- DOMAIN-SUFFIX,nyt.com,🚀 节点选择
-- DOMAIN-SUFFIX,nytimes.com,🚀 节点选择
-- DOMAIN-SUFFIX,omnigroup.com,🚀 节点选择
-- DOMAIN-SUFFIX,onedrive.com,🚀 节点选择
-- DOMAIN-SUFFIX,onenote.com,🚀 节点选择
-- DOMAIN-SUFFIX,ooyala.com,🚀 节点选择
-- DOMAIN-SUFFIX,openvpn.net,🚀 节点选择
-- DOMAIN-SUFFIX,openwrt.org,🚀 节点选择
-- DOMAIN-SUFFIX,orkut.com,🚀 节点选择
-- DOMAIN-SUFFIX,osxdaily.com,🚀 节点选择
-- DOMAIN-SUFFIX,outlook.com,🚀 节点选择
-- DOMAIN-SUFFIX,ow.ly,🚀 节点选择
-- DOMAIN-SUFFIX,paddleapi.com,🚀 节点选择
-- DOMAIN-SUFFIX,parallels.com,🚀 节点选择
-- DOMAIN-SUFFIX,parse.com,🚀 节点选择
-- DOMAIN-SUFFIX,pdfexpert.com,🚀 节点选择
-- DOMAIN-SUFFIX,periscope.tv,🚀 节点选择
-- DOMAIN-SUFFIX,pinboard.in,🚀 节点选择
-- DOMAIN-SUFFIX,pinterest.com,🚀 节点选择
-- DOMAIN-SUFFIX,pixelmator.com,🚀 节点选择
-- DOMAIN-SUFFIX,pixiv.net,🚀 节点选择
-- DOMAIN-SUFFIX,playpcesor.com,🚀 节点选择
-- DOMAIN-SUFFIX,playstation.com,🚀 节点选择
-- DOMAIN-SUFFIX,playstation.com.hk,🚀 节点选择
-- DOMAIN-SUFFIX,playstation.net,🚀 节点选择
-- DOMAIN-SUFFIX,playstationnetwork.com,🚀 节点选择
-- DOMAIN-SUFFIX,pushwoosh.com,🚀 节点选择
-- DOMAIN-SUFFIX,rime.im,🚀 节点选择
-- DOMAIN-SUFFIX,servebom.com,🚀 节点选择
-- DOMAIN-SUFFIX,sfx.ms,🚀 节点选择
-- DOMAIN-SUFFIX,shadowsocks.org,🚀 节点选择
-- DOMAIN-SUFFIX,sharethis.com,🚀 节点选择
-- DOMAIN-SUFFIX,shazam.com,🚀 节点选择
-- DOMAIN-SUFFIX,skype.com,🚀 节点选择
-- DOMAIN-SUFFIX,smartdns🚀 节点选择.com,🚀 节点选择
-- DOMAIN-SUFFIX,smartmailcloud.com,🚀 节点选择
-- DOMAIN-SUFFIX,sndcdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,sony.com,🚀 节点选择
-- DOMAIN-SUFFIX,soundcloud.com,🚀 节点选择
-- DOMAIN-SUFFIX,sourceforge.net,🚀 节点选择
-- DOMAIN-SUFFIX,spotify.com,🚀 节点选择
-- DOMAIN-SUFFIX,squarespace.com,🚀 节点选择
-- DOMAIN-SUFFIX,sstatic.net,🚀 节点选择
-- DOMAIN-SUFFIX,st.luluku.pw,🚀 节点选择
-- DOMAIN-SUFFIX,stackoverflow.com,🚀 节点选择
-- DOMAIN-SUFFIX,startpage.com,🚀 节点选择
-- DOMAIN-SUFFIX,staticflickr.com,🚀 节点选择
-- DOMAIN-SUFFIX,steamcommunity.com,🚀 节点选择
-- DOMAIN-SUFFIX,symauth.com,🚀 节点选择
-- DOMAIN-SUFFIX,symcb.com,🚀 节点选择
-- DOMAIN-SUFFIX,symcd.com,🚀 节点选择
-- DOMAIN-SUFFIX,tapbots.com,🚀 节点选择
-- DOMAIN-SUFFIX,tapbots.net,🚀 节点选择
-- DOMAIN-SUFFIX,tdesktop.com,🚀 节点选择
-- DOMAIN-SUFFIX,techcrunch.com,🚀 节点选择
-- DOMAIN-SUFFIX,techsmith.com,🚀 节点选择
-- DOMAIN-SUFFIX,thepiratebay.org,🚀 节点选择
-- DOMAIN-SUFFIX,theverge.com,🚀 节点选择
-- DOMAIN-SUFFIX,time.com,🚀 节点选择
-- DOMAIN-SUFFIX,timeinc.net,🚀 节点选择
-- DOMAIN-SUFFIX,tiny.cc,🚀 节点选择
-- DOMAIN-SUFFIX,tinypic.com,🚀 节点选择
-- DOMAIN-SUFFIX,tmblr.co,🚀 节点选择
-- DOMAIN-SUFFIX,todoist.com,🚀 节点选择
-- DOMAIN-SUFFIX,trello.com,🚀 节点选择
-- DOMAIN-SUFFIX,trustasiassl.com,🚀 节点选择
-- DOMAIN-SUFFIX,tumblr.co,🚀 节点选择
-- DOMAIN-SUFFIX,tumblr.com,🚀 节点选择
-- DOMAIN-SUFFIX,tweetdeck.com,🚀 节点选择
-- DOMAIN-SUFFIX,tweetmarker.net,🚀 节点选择
-- DOMAIN-SUFFIX,twitch.tv,🚀 节点选择
-- DOMAIN-SUFFIX,txmblr.com,🚀 节点选择
-- DOMAIN-SUFFIX,typekit.net,🚀 节点选择
-- DOMAIN-SUFFIX,ubertags.com,🚀 节点选择
-- DOMAIN-SUFFIX,ublock.org,🚀 节点选择
-- DOMAIN-SUFFIX,ubnt.com,🚀 节点选择
-- DOMAIN-SUFFIX,ulyssesapp.com,🚀 节点选择
-- DOMAIN-SUFFIX,urchin.com,🚀 节点选择
-- DOMAIN-SUFFIX,usertrust.com,🚀 节点选择
-- DOMAIN-SUFFIX,v.gd,🚀 节点选择
-- DOMAIN-SUFFIX,v2ex.com,🚀 节点选择
-- DOMAIN-SUFFIX,vimeo.com,🚀 节点选择
-- DOMAIN-SUFFIX,vimeocdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,vine.co,🚀 节点选择
-- DOMAIN-SUFFIX,vivaldi.com,🚀 节点选择
-- DOMAIN-SUFFIX,vox-cdn.com,🚀 节点选择
-- DOMAIN-SUFFIX,vsco.co,🚀 节点选择
-- DOMAIN-SUFFIX,vultr.com,🚀 节点选择
-- DOMAIN-SUFFIX,w.org,🚀 节点选择
-- DOMAIN-SUFFIX,w3schools.com,🚀 节点选择
-- DOMAIN-SUFFIX,webtype.com,🚀 节点选择
-- DOMAIN-SUFFIX,wikiwand.com,🚀 节点选择
-- DOMAIN-SUFFIX,wikileaks.org,🚀 节点选择
-- DOMAIN-SUFFIX,wikimedia.org,🚀 节点选择
-- DOMAIN-SUFFIX,wikipedia.com,🚀 节点选择
-- DOMAIN-SUFFIX,wikipedia.org,🚀 节点选择
-- DOMAIN-SUFFIX,windows.com,🚀 节点选择
-- DOMAIN-SUFFIX,windows.net,🚀 节点选择
-- DOMAIN-SUFFIX,wire.com,🚀 节点选择
-- DOMAIN-SUFFIX,wordpress.com,🚀 节点选择
-- DOMAIN-SUFFIX,workflowy.com,🚀 节点选择
-- DOMAIN-SUFFIX,wp.com,🚀 节点选择
-- DOMAIN-SUFFIX,wsj.com,🚀 节点选择
-- DOMAIN-SUFFIX,wsj.net,🚀 节点选择
-- DOMAIN-SUFFIX,xda-developers.com,🚀 节点选择
-- DOMAIN-SUFFIX,xeeno.com,🚀 节点选择
-- DOMAIN-SUFFIX,xiti.com,🚀 节点选择
-- DOMAIN-SUFFIX,yahoo.com,🚀 节点选择
-- DOMAIN-SUFFIX,yimg.com,🚀 节点选择
-- DOMAIN-SUFFIX,ying.com,🚀 节点选择
-- DOMAIN-SUFFIX,yoyo.org,🚀 节点选择
-- DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
-- DOMAIN-SUFFIX,telegra.ph,🚀 节点选择
-- DOMAIN-SUFFIX,telegram.org,🚀 节点选择
-- IP-CIDR,91.108.4.0/22,🚀 节点选择,no-resolve
-- IP-CIDR,91.108.8.0/21,🚀 节点选择,no-resolve
-- IP-CIDR,91.108.16.0/22,🚀 节点选择,no-resolve
-- IP-CIDR,91.108.56.0/22,🚀 节点选择,no-resolve
-- IP-CIDR,149.154.160.0/20,🚀 节点选择,no-resolve
-- IP-CIDR6,2001:67c:4e8::/48,🚀 节点选择,no-resolve
-- IP-CIDR6,2001:b28:f23d::/48,🚀 节点选择,no-resolve
-- IP-CIDR6,2001:b28:f23f::/48,🚀 节点选择,no-resolve
-- IP-CIDR,120.232.181.162/32,🚀 节点选择,no-resolve
-- IP-CIDR,120.241.147.226/32,🚀 节点选择,no-resolve
-- IP-CIDR,120.253.253.226/32,🚀 节点选择,no-resolve
-- IP-CIDR,120.253.255.162/32,🚀 节点选择,no-resolve
-- IP-CIDR,120.253.255.34/32,🚀 节点选择,no-resolve
-- IP-CIDR,120.253.255.98/32,🚀 节点选择,no-resolve
-- IP-CIDR,180.163.150.162/32,🚀 节点选择,no-resolve
-- IP-CIDR,180.163.150.34/32,🚀 节点选择,no-resolve
-- IP-CIDR,180.163.151.162/32,🚀 节点选择,no-resolve
-- IP-CIDR,180.163.151.34/32,🚀 节点选择,no-resolve
-- IP-CIDR,203.208.39.0/24,🚀 节点选择,no-resolve
-- IP-CIDR,203.208.40.0/24,🚀 节点选择,no-resolve
-- IP-CIDR,203.208.41.0/24,🚀 节点选择,no-resolve
-- IP-CIDR,203.208.43.0/24,🚀 节点选择,no-resolve
-- IP-CIDR,203.208.50.0/24,🚀 节点选择,no-resolve
-- IP-CIDR,220.181.174.162/32,🚀 节点选择,no-resolve
-- IP-CIDR,220.181.174.226/32,🚀 节点选择,no-resolve
-- IP-CIDR,220.181.174.34/32,🚀 节点选择,no-resolve
+- DOMAIN-SUFFIX,9to5mac.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,abpchina.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,adblockplus.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,adobe.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,akamaized.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,alfredapp.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,amplitude.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ampproject.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,android.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,angularjs.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,aolcdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,apkpure.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,appledaily.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,appshopper.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,appspot.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,arcgis.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,archive.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,armorgames.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,aspnetcdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,att.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,awsstatic.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,azureedge.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,azurewebsites.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bing.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bintray.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bit.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bit.ly,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bitbucket.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bjango.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bkrtx.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blog.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blogcdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blogger.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blogsmithmedia.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blogspot.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,blogspot.hk,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,bloomberg.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,box.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,box.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cachefly.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,chromium.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cl.ly,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cloudflare.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cloudfront.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cloudmagic.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cmail19.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cnet.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,cocoapods.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,comodoca.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,crashlytics.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,culturedcode.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,d.pr,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,danilo.to,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,dayone.me,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,db.tt,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,deskconnect.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,disq.us,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,disqus.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,disquscdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,dnsimple.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,docker.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,dribbble.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,droplr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,duckduckgo.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,dueapp.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,dytt8.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,edgecastcdn.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,edgekey.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,edgesuite.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,engadget.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,entrust.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,eurekavpt.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,evernote.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fabric.io,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fast.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fastly.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fc2.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,feedburner.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,feedly.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,feedsportal.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,fiftythree.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,firebaseio.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,flexibits.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,flickr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,flipboard.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,g.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gabia.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,geni.us,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gfx.ms,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ggpht.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ghostnoteapp.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,git.io,龙猫云 - TotoroCloud
+- DOMAIN-KEYWORD,github,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,globalsign.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gmodules.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,godaddy.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,golang.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gongm.in,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,goo.gl,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,goodreaders.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,goodreads.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gravatar.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gstatic.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,gvt0.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,hockeyapp.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,hotmail.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,icons8.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ifixit.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ift.tt,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ifttt.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,iherb.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,imageshack.us,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,img.ly,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,imgur.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,imore.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,instapaper.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ipn.li,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,is.gd,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,issuu.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,itgonglun.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,itun.es,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ixquick.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,j.mp,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,js.revsci.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,jshint.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,jtvnw.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,justgetflux.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,kat.cr,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,klip.me,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,libsyn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,linkedin.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,line-apps.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,linode.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,lithium.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,littlehj.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,live.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,live.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,livefilestore.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,llnwd.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,macid.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,macromedia.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,macrumors.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mashable.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mathjax.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,medium.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mega.co.nz,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mega.nz,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,megaupload.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,microsofttranslator.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mindnode.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,mobile01.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,modmyi.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,msedge.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,myfontastic.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,name.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,nextmedia.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,nsstatic.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,nssurge.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,nyt.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,nytimes.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,omnigroup.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,onedrive.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,onenote.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ooyala.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,openvpn.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,openwrt.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,orkut.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,osxdaily.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,outlook.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ow.ly,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,paddleapi.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,parallels.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,parse.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pdfexpert.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,periscope.tv,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pinboard.in,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pinterest.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pixelmator.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pixiv.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,playpcesor.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,playstation.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,playstation.com.hk,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,playstation.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,playstationnetwork.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,pushwoosh.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,rime.im,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,servebom.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sfx.ms,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,shadowsocks.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sharethis.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,shazam.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,skype.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,smartdns龙猫云 - TotoroCloud.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,smartmailcloud.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sndcdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sony.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,soundcloud.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sourceforge.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,spotify.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,squarespace.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,sstatic.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,st.luluku.pw,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,stackoverflow.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,startpage.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,staticflickr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,steamcommunity.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,symauth.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,symcb.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,symcd.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tapbots.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tapbots.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tdesktop.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,techcrunch.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,techsmith.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,thepiratebay.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,theverge.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,time.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,timeinc.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tiny.cc,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tinypic.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tmblr.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,todoist.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,trello.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,trustasiassl.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tumblr.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tumblr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tweetdeck.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,tweetmarker.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,twitch.tv,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,txmblr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,typekit.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ubertags.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ublock.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ubnt.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ulyssesapp.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,urchin.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,usertrust.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,v.gd,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,v2ex.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vimeo.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vimeocdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vine.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vivaldi.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vox-cdn.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vsco.co,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,vultr.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,w.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,w3schools.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,webtype.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wikiwand.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wikileaks.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wikimedia.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wikipedia.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wikipedia.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,windows.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,windows.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wire.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wordpress.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,workflowy.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wp.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wsj.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,wsj.net,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,xda-developers.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,xeeno.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,xiti.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,yahoo.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,yimg.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ying.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,yoyo.org,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,ytimg.com,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,telegra.ph,龙猫云 - TotoroCloud
+- DOMAIN-SUFFIX,telegram.org,龙猫云 - TotoroCloud
+- IP-CIDR,91.108.4.0/22,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,91.108.8.0/21,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,91.108.16.0/22,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,91.108.56.0/22,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,149.154.160.0/20,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.232.181.162/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.241.147.226/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.253.253.226/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.253.255.162/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.253.255.34/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,120.253.255.98/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,180.163.150.162/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,180.163.150.34/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,180.163.151.162/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,180.163.151.34/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,203.208.39.0/24,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,203.208.40.0/24,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,203.208.41.0/24,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,203.208.43.0/24,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,203.208.50.0/24,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,220.181.174.162/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,220.181.174.226/32,龙猫云 - TotoroCloud,no-resolve
+- IP-CIDR,220.181.174.34/32,龙猫云 - TotoroCloud,no-resolve
 - DOMAIN,injections.adguard.org,DIRECT
 - DOMAIN,local.adguard.org,DIRECT
 - DOMAIN-SUFFIX,local,DIRECT
@@ -727,4 +1304,4 @@ rules:
 - DOMAIN-SUFFIX,cn,DIRECT
 - DOMAIN-KEYWORD,-cn,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,🚀 节点选择
+- MATCH,龙猫云 - TotoroCloud
