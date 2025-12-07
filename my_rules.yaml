@@ -6,7 +6,7 @@ rules:
   - IP-CIDR,192.168.191.0/24,DIRECT      # zerotier虚拟局域网
   - IP-CIDR,10.0.0.0/8,DIRECT            # easytier虚拟局域网
   - DOMAIN-KEYWORD,rhodes-island,DIRECT
-  - DOMAIN-KEYWORD,picacomic,🚀 节点选择
+  - DOMAIN-KEYWORD,picacomic,龙猫云 - TotoroCloud
   - DOMAIN-KEYWORD,dynv6,DIRECT           # DDNS
 
 # Steam下载直连规则（关键！添加在这里）
