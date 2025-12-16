@@ -35,7 +35,7 @@ proxies:
   password: 5d628fbb-e3bb-42b2-b9d2-c105641e072c
   udp: true
   skip-cert-verify: true
-- name: 剩余流量：36.95 GB
+- name: 剩余流量：30.28 GB
   type: trojan
   server: lmnode-ixd3fh2v5uqlv3z-lmhk.lma1b2.com
   port: 53401
@@ -553,7 +553,7 @@ proxy-groups:
   - 自动选择
   - 故障转移
   - 最新网址：totorocloud.net
-  - 剩余流量：36.95 GB
+  - 剩余流量：30.28 GB
   - 距离下次重置剩余：22 天
   - 套餐到期：2026-01-07
   - 香港 01
@@ -630,7 +630,7 @@ proxy-groups:
   type: url-test
   proxies:
   - 最新网址：totorocloud.net
-  - 剩余流量：36.95 GB
+  - 剩余流量：30.28 GB
   - 距离下次重置剩余：22 天
   - 套餐到期：2026-01-07
   - 香港 01
@@ -709,7 +709,7 @@ proxy-groups:
   type: fallback
   proxies:
   - 最新网址：totorocloud.net
-  - 剩余流量：36.95 GB
+  - 剩余流量：30.28 GB
   - 距离下次重置剩余：22 天
   - 套餐到期：2026-01-07
   - 香港 01
