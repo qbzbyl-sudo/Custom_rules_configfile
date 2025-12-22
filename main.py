@@ -11,7 +11,7 @@ custom_rules_path = "my_rules.yaml"
 output_config_path = "config.yaml"
 
 # 伪装成Clash客户端的请求头
-HEADERS = {
+headers = {
     # 伪装成 Clash Meta (Mihomo) 客户端，告诉机场我支持新协议
     "User-Agent": "Clash.Meta/v1.18.1 (Windows NT 10.0; Win64; x64) Mihomo/1.18.1"
 }
