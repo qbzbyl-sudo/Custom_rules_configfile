@@ -531,14 +531,6 @@ proxies:
   udp: true
   skip-cert-verify: true
   network: ws
-- name: 42台湾-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17942
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
 - name: '官网: www.dg6.me'
   type: vmess
   server: 114.114.114.114
@@ -594,7 +586,6 @@ proxy-groups:
   - 🇭🇰3香港-专线(TCP)
   - 4台湾-专线(TCP)
   - 5台湾-专线(TCP)
-  - 42台湾-专线(TCP)
   - '官网: www.dg6.me'
 - name: ♻️自动选择
   type: url-test
@@ -637,7 +628,6 @@ proxy-groups:
   - 🇭🇰3香港-专线(TCP)
   - 4台湾-专线(TCP)
   - 5台湾-专线(TCP)
-  - 42台湾-专线(TCP)
   - '官网: www.dg6.me'
   url: http://1.1.1.1
   interval: 600
@@ -682,7 +672,6 @@ proxy-groups:
   - 🇭🇰3香港-专线(TCP)
   - 4台湾-专线(TCP)
   - 5台湾-专线(TCP)
-  - 42台湾-专线(TCP)
   - '官网: www.dg6.me'
   url: http://1.1.1.1
   interval: 450
@@ -750,7 +739,6 @@ proxy-groups:
   - 🇰🇷25韩国-专线(TCP)
   - 4台湾-专线(TCP)
   - 5台湾-专线(TCP)
-  - 42台湾-专线(TCP)
   - '官网: www.dg6.me'
 - name: 🐴Trojan
   type: select
@@ -769,7 +757,6 @@ proxy-groups:
   - 🇭🇰3香港-专线(TCP)
   - 4台湾-专线(TCP)
   - 5台湾-专线(TCP)
-  - 42台湾-专线(TCP)
 rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,192.168.191.0/24,DIRECT
