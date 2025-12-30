@@ -639,6 +639,7 @@ rules:
 - DOMAIN-SUFFIX,gravatar.com,狗狗加速.com
 - DOMAIN-SUFFIX,gstatic.com,狗狗加速.com
 - DOMAIN-SUFFIX,gvt0.com,狗狗加速.com
+- DOMAIN-SUFFIX,gvt2.com,狗狗加速.com
 - DOMAIN-SUFFIX,hockeyapp.net,狗狗加速.com
 - DOMAIN-SUFFIX,hotmail.com,狗狗加速.com
 - DOMAIN-SUFFIX,icons8.com,狗狗加速.com
