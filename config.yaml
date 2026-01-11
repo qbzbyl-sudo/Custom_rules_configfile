@@ -250,6 +250,7 @@ rules:
 - PROCESS-NAME,uTorrent.exe,DIRECT
 - PROCESS-NAME,WebTorrent.exe,DIRECT
 - PROCESS-NAME,aDrive.exe,DIRECT
+- PROCESS-NAME,EpicWebHelper.exe,DIRECT
 - DOMAIN-SUFFIX,services.googleapis.cn,狗狗加速.com
 - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,狗狗加速.com
 - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
@@ -468,8 +469,9 @@ rules:
 - DOMAIN-SUFFIX,zhimg.com,DIRECT
 - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
 - DOMAIN-SUFFIX,zoho.com,DIRECT
-- DOMAIN,fastly-download.epicgames.com,DIRECT
+- DOMAIN-SUFFIX,epicgames.com,DIRECT
 - DOMAIN,epicgames-download1.akamaized.net,DIRECT
+- DOMAIN-SUFFIX,unrealengine.com,DIRECT
 - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
 - DOMAIN-SUFFIX,steamserver.net,DIRECT
 - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
