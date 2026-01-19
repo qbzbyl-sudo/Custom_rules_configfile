@@ -131,521 +131,33 @@ dns:
     - +.googleapis.com
     - +.gvt1.com
 proxies:
-- name: 🇺🇸11美国西集群-全网优化(Tuic)
-  type: tuic
-  server: 11us.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇺🇸12美国旧金山-全网优化(Tuic)
-  type: tuic
-  server: 12us.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇺🇸29美国旧金山-全网优化(Tuic)
-  type: tuic
-  server: 29us.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇺🇸39美国华盛顿-全网优化(Tuic)
-  type: tuic
-  server: 39us.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇯🇵6日本-联通/移动(Tuic)
-  type: tuic
-  server: 6jp.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇯🇵7日本-联通/移动(Tuic)
-  type: tuic
-  server: 7jp.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇰🇷8韩国集群-全网优化(Tuic)
-  type: tuic
-  server: 8kr.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇰🇷9韩国集群-全网优化(Tuic)
-  type: tuic
-  server: 9kr.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇰🇷25韩国集群-全网优化(Tuic)
-  type: tuic
-  server: 25kr.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇯🇵10日本-全网优化(Tuic)
-  type: tuic
-  server: 10jp.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  type: tuic
-  server: 13dxb.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇮🇳14印度-移动/南方联通(Tuic)
-  type: tuic
-  server: 14in.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇸🇬15新加坡-全网优化(Tuic)
-  type: tuic
-  server: 15sg.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇸🇬24新加坡-联通/移动(Tuic)
-  type: tuic
-  server: 24sg.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇩🇪16德国-电信/联通(Tuic)
-  type: tuic
-  server: 16de.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇬🇧17英国-全网优化(Tuic)
-  type: tuic
-  server: 17uk.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇨🇦18加拿大-全网优化(Tuic)
-  type: tuic
-  server: 18ca.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇨🇦26加拿大-全网优化(Tuic)
-  type: tuic
-  server: 26ca.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇦🇺19澳洲-移动优化(Tuic)
-  type: tuic
-  server: 19sdy.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇧🇷20巴西-全网优化(Tuic)
-  type: tuic
-  server: 20br.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇨🇱21智利-全网优化(Tuic)
-  type: tuic
-  server: 21chi.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇹🇷22土耳其-全网优化(Tuic)
-  type: tuic
-  server: 22tr.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇫🇷23法国-全网优化(Tuic)
-  type: tuic
-  server: 23fr.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇲🇽27墨西哥-全网优化(Tuic)
-  type: tuic
-  server: 27mx.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇳🇱28荷兰-全网优化(Tuic)
-  type: tuic
-  server: 28nl.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇮🇱30以色列-全网优化(Tuic)
-  type: tuic
-  server: 30il.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇪🇸31西班牙-全网优化(Tuic)
-  type: tuic
-  server: 31es.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇷🇺32俄罗斯-全网优化(Tuic)
-  type: tuic
-  server: 32ru.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  type: tuic
-  server: 41ch.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇿🇦43南非-约翰内斯堡(Tuic)
-  type: tuic
-  server: 43za.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇭🇰1香港集群-全网优化(Tuic)
-  type: tuic
-  server: 1hk.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 4台湾-联通优化(Tuic)
-  type: tuic
-  server: 4tw.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 5台湾-联通优化(Tuic)
-  type: tuic
-  server: 5tw.cloudfrontcdn.com
-  port: 4430
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  reduce-rtt: false
-  congestion-control: bbr
-  udp-relay-mode: native
-  sni: ''
-  disable-sni: true
-  skip-cert-verify: true
-- name: 🇯🇵6日本-集群-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17906
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
+- name: ❗您已到期或流量用完❗
+  type: ss
+  server: 1.1.1.1
+  port: '1080'
+  cipher: chacha20-ietf-poly1305
+  password: fake_node_password
   udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇯🇵7日本-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17907
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
+- name: ❗请续费使用❗
+  type: ss
+  server: 1.1.1.1
+  port: '1080'
+  cipher: chacha20-ietf-poly1305
+  password: fake_node_password
   udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇯🇵10日本-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17910
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
+- name: ❗续费后更新订阅❗
+  type: ss
+  server: 1.1.1.1
+  port: '1080'
+  cipher: chacha20-ietf-poly1305
+  password: fake_node_password
   udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇺🇸11美国西集群-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17911
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇺🇸12美国旧金山-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17912
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇸🇬15新加坡-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17915
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇦🇺19澳洲-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17919
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇸🇬24新加坡-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17924
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇰🇷25韩国-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17925
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇭🇰1香港-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17901
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇭🇰2香港-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17902
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 🇭🇰3香港-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17903
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 4台湾-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17904
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: 5台湾-专线(TCP)
-  type: trojan
-  server: dnsmart.dg-cdn.mob.networklinkpro.com
-  port: 17905
-  password: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  udp: true
-  skip-cert-verify: true
-  network: ws
-- name: '官网: www.dg6.me'
-  type: vmess
-  server: 114.114.114.114
-  port: 2235
-  uuid: d3c2b256-5375-4cf2-9c46-91c38611b0b2
-  alterId: 0
-  cipher: auto
+- name: ❗官网 https://www.dg6.me❗
+  type: ss
+  server: 1.1.1.1
+  port: '1080'
+  cipher: chacha20-ietf-poly1305
+  password: fake_node_password
   udp: true
 proxy-groups:
 - name: 狗狗加速.com
@@ -653,260 +165,28 @@ proxy-groups:
   proxies:
   - ♻️自动选择
   - 🔯故障转移
-  - 🐴Trojan
-  - 🔥ChatGPT
-  - Tuic
-  - 🇺🇸11美国西集群-全网优化(Tuic)
-  - 🇺🇸12美国旧金山-全网优化(Tuic)
-  - 🇺🇸29美国旧金山-全网优化(Tuic)
-  - 🇺🇸39美国华盛顿-全网优化(Tuic)
-  - 🇯🇵6日本-联通/移动(Tuic)
-  - 🇯🇵7日本-联通/移动(Tuic)
-  - 🇰🇷8韩国集群-全网优化(Tuic)
-  - 🇰🇷9韩国集群-全网优化(Tuic)
-  - 🇰🇷25韩国集群-全网优化(Tuic)
-  - 🇯🇵10日本-全网优化(Tuic)
-  - 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  - 🇮🇳14印度-移动/南方联通(Tuic)
-  - 🇸🇬15新加坡-全网优化(Tuic)
-  - 🇸🇬24新加坡-联通/移动(Tuic)
-  - 🇩🇪16德国-电信/联通(Tuic)
-  - 🇬🇧17英国-全网优化(Tuic)
-  - 🇨🇦18加拿大-全网优化(Tuic)
-  - 🇨🇦26加拿大-全网优化(Tuic)
-  - 🇦🇺19澳洲-移动优化(Tuic)
-  - 🇧🇷20巴西-全网优化(Tuic)
-  - 🇨🇱21智利-全网优化(Tuic)
-  - 🇹🇷22土耳其-全网优化(Tuic)
-  - 🇫🇷23法国-全网优化(Tuic)
-  - 🇲🇽27墨西哥-全网优化(Tuic)
-  - 🇳🇱28荷兰-全网优化(Tuic)
-  - 🇮🇱30以色列-全网优化(Tuic)
-  - 🇪🇸31西班牙-全网优化(Tuic)
-  - 🇷🇺32俄罗斯-全网优化(Tuic)
-  - 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  - 🇿🇦43南非-约翰内斯堡(Tuic)
-  - 🇭🇰1香港集群-全网优化(Tuic)
-  - 4台湾-联通优化(Tuic)
-  - 5台湾-联通优化(Tuic)
-  - 🇯🇵6日本-集群-专线(TCP)
-  - 🇯🇵7日本-专线(TCP)
-  - 🇯🇵10日本-专线(TCP)
-  - 🇺🇸11美国西集群-专线(TCP)
-  - 🇺🇸12美国旧金山-专线(TCP)
-  - 🇸🇬15新加坡-专线(TCP)
-  - 🇦🇺19澳洲-专线(TCP)
-  - 🇸🇬24新加坡-专线(TCP)
-  - 🇰🇷25韩国-专线(TCP)
-  - 🇭🇰1香港-专线(TCP)
-  - 🇭🇰2香港-专线(TCP)
-  - 🇭🇰3香港-专线(TCP)
-  - 4台湾-专线(TCP)
-  - 5台湾-专线(TCP)
-  - '官网: www.dg6.me'
+  - ❗您已到期或流量用完❗
+  - ❗请续费使用❗
+  - ❗续费后更新订阅❗
+  - ❗官网 https://www.dg6.me❗
 - name: ♻️自动选择
   type: url-test
   proxies:
-  - 🇺🇸11美国西集群-全网优化(Tuic)
-  - 🇺🇸12美国旧金山-全网优化(Tuic)
-  - 🇺🇸29美国旧金山-全网优化(Tuic)
-  - 🇺🇸39美国华盛顿-全网优化(Tuic)
-  - 🇯🇵6日本-联通/移动(Tuic)
-  - 🇯🇵7日本-联通/移动(Tuic)
-  - 🇰🇷8韩国集群-全网优化(Tuic)
-  - 🇰🇷9韩国集群-全网优化(Tuic)
-  - 🇰🇷25韩国集群-全网优化(Tuic)
-  - 🇯🇵10日本-全网优化(Tuic)
-  - 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  - 🇮🇳14印度-移动/南方联通(Tuic)
-  - 🇸🇬15新加坡-全网优化(Tuic)
-  - 🇸🇬24新加坡-联通/移动(Tuic)
-  - 🇩🇪16德国-电信/联通(Tuic)
-  - 🇬🇧17英国-全网优化(Tuic)
-  - 🇨🇦18加拿大-全网优化(Tuic)
-  - 🇨🇦26加拿大-全网优化(Tuic)
-  - 🇦🇺19澳洲-移动优化(Tuic)
-  - 🇧🇷20巴西-全网优化(Tuic)
-  - 🇨🇱21智利-全网优化(Tuic)
-  - 🇹🇷22土耳其-全网优化(Tuic)
-  - 🇫🇷23法国-全网优化(Tuic)
-  - 🇲🇽27墨西哥-全网优化(Tuic)
-  - 🇳🇱28荷兰-全网优化(Tuic)
-  - 🇮🇱30以色列-全网优化(Tuic)
-  - 🇪🇸31西班牙-全网优化(Tuic)
-  - 🇷🇺32俄罗斯-全网优化(Tuic)
-  - 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  - 🇿🇦43南非-约翰内斯堡(Tuic)
-  - 🇭🇰1香港集群-全网优化(Tuic)
-  - 4台湾-联通优化(Tuic)
-  - 5台湾-联通优化(Tuic)
-  - 🇯🇵6日本-集群-专线(TCP)
-  - 🇯🇵7日本-专线(TCP)
-  - 🇯🇵10日本-专线(TCP)
-  - 🇺🇸11美国西集群-专线(TCP)
-  - 🇺🇸12美国旧金山-专线(TCP)
-  - 🇸🇬15新加坡-专线(TCP)
-  - 🇦🇺19澳洲-专线(TCP)
-  - 🇸🇬24新加坡-专线(TCP)
-  - 🇰🇷25韩国-专线(TCP)
-  - 🇭🇰1香港-专线(TCP)
-  - 🇭🇰2香港-专线(TCP)
-  - 🇭🇰3香港-专线(TCP)
-  - 4台湾-专线(TCP)
-  - 5台湾-专线(TCP)
-  - '官网: www.dg6.me'
+  - ❗您已到期或流量用完❗
+  - ❗请续费使用❗
+  - ❗续费后更新订阅❗
+  - ❗官网 https://www.dg6.me❗
   url: http://1.1.1.1
   interval: 600
 - name: 🔯故障转移
   type: fallback
   proxies:
-  - 🇺🇸11美国西集群-全网优化(Tuic)
-  - 🇺🇸12美国旧金山-全网优化(Tuic)
-  - 🇺🇸29美国旧金山-全网优化(Tuic)
-  - 🇺🇸39美国华盛顿-全网优化(Tuic)
-  - 🇯🇵6日本-联通/移动(Tuic)
-  - 🇯🇵7日本-联通/移动(Tuic)
-  - 🇰🇷8韩国集群-全网优化(Tuic)
-  - 🇰🇷9韩国集群-全网优化(Tuic)
-  - 🇰🇷25韩国集群-全网优化(Tuic)
-  - 🇯🇵10日本-全网优化(Tuic)
-  - 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  - 🇮🇳14印度-移动/南方联通(Tuic)
-  - 🇸🇬15新加坡-全网优化(Tuic)
-  - 🇸🇬24新加坡-联通/移动(Tuic)
-  - 🇩🇪16德国-电信/联通(Tuic)
-  - 🇬🇧17英国-全网优化(Tuic)
-  - 🇨🇦18加拿大-全网优化(Tuic)
-  - 🇨🇦26加拿大-全网优化(Tuic)
-  - 🇦🇺19澳洲-移动优化(Tuic)
-  - 🇧🇷20巴西-全网优化(Tuic)
-  - 🇨🇱21智利-全网优化(Tuic)
-  - 🇹🇷22土耳其-全网优化(Tuic)
-  - 🇫🇷23法国-全网优化(Tuic)
-  - 🇲🇽27墨西哥-全网优化(Tuic)
-  - 🇳🇱28荷兰-全网优化(Tuic)
-  - 🇮🇱30以色列-全网优化(Tuic)
-  - 🇪🇸31西班牙-全网优化(Tuic)
-  - 🇷🇺32俄罗斯-全网优化(Tuic)
-  - 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  - 🇿🇦43南非-约翰内斯堡(Tuic)
-  - 🇭🇰1香港集群-全网优化(Tuic)
-  - 4台湾-联通优化(Tuic)
-  - 5台湾-联通优化(Tuic)
-  - 🇯🇵6日本-集群-专线(TCP)
-  - 🇯🇵7日本-专线(TCP)
-  - 🇯🇵10日本-专线(TCP)
-  - 🇺🇸11美国西集群-专线(TCP)
-  - 🇺🇸12美国旧金山-专线(TCP)
-  - 🇸🇬15新加坡-专线(TCP)
-  - 🇦🇺19澳洲-专线(TCP)
-  - 🇸🇬24新加坡-专线(TCP)
-  - 🇰🇷25韩国-专线(TCP)
-  - 🇭🇰1香港-专线(TCP)
-  - 🇭🇰2香港-专线(TCP)
-  - 🇭🇰3香港-专线(TCP)
-  - 4台湾-专线(TCP)
-  - 5台湾-专线(TCP)
-  - '官网: www.dg6.me'
+  - ❗您已到期或流量用完❗
+  - ❗请续费使用❗
+  - ❗续费后更新订阅❗
+  - ❗官网 https://www.dg6.me❗
   url: http://1.1.1.1
   interval: 450
-- name: Tuic
-  type: select
-  proxies:
-  - 🇺🇸11美国西集群-全网优化(Tuic)
-  - 🇺🇸12美国旧金山-全网优化(Tuic)
-  - 🇺🇸29美国旧金山-全网优化(Tuic)
-  - 🇺🇸39美国华盛顿-全网优化(Tuic)
-  - 🇯🇵6日本-联通/移动(Tuic)
-  - 🇯🇵7日本-联通/移动(Tuic)
-  - 🇰🇷8韩国集群-全网优化(Tuic)
-  - 🇰🇷9韩国集群-全网优化(Tuic)
-  - 🇰🇷25韩国集群-全网优化(Tuic)
-  - 🇯🇵10日本-全网优化(Tuic)
-  - 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  - 🇮🇳14印度-移动/南方联通(Tuic)
-  - 🇸🇬15新加坡-全网优化(Tuic)
-  - 🇸🇬24新加坡-联通/移动(Tuic)
-  - 🇩🇪16德国-电信/联通(Tuic)
-  - 🇬🇧17英国-全网优化(Tuic)
-  - 🇨🇦18加拿大-全网优化(Tuic)
-  - 🇨🇦26加拿大-全网优化(Tuic)
-  - 🇦🇺19澳洲-移动优化(Tuic)
-  - 🇧🇷20巴西-全网优化(Tuic)
-  - 🇨🇱21智利-全网优化(Tuic)
-  - 🇹🇷22土耳其-全网优化(Tuic)
-  - 🇫🇷23法国-全网优化(Tuic)
-  - 🇲🇽27墨西哥-全网优化(Tuic)
-  - 🇳🇱28荷兰-全网优化(Tuic)
-  - 🇮🇱30以色列-全网优化(Tuic)
-  - 🇪🇸31西班牙-全网优化(Tuic)
-  - 🇷🇺32俄罗斯-全网优化(Tuic)
-  - 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  - 🇿🇦43南非-约翰内斯堡(Tuic)
-  - 🇭🇰1香港集群-全网优化(Tuic)
-  - 4台湾-联通优化(Tuic)
-  - 5台湾-联通优化(Tuic)
-- name: 🔥ChatGPT
-  type: select
-  proxies:
-  - 🇺🇸11美国西集群-全网优化(Tuic)
-  - 🇺🇸12美国旧金山-全网优化(Tuic)
-  - 🇺🇸29美国旧金山-全网优化(Tuic)
-  - 🇺🇸39美国华盛顿-全网优化(Tuic)
-  - 🇯🇵6日本-联通/移动(Tuic)
-  - 🇯🇵7日本-联通/移动(Tuic)
-  - 🇰🇷8韩国集群-全网优化(Tuic)
-  - 🇰🇷9韩国集群-全网优化(Tuic)
-  - 🇰🇷25韩国集群-全网优化(Tuic)
-  - 🇯🇵10日本-全网优化(Tuic)
-  - 🇦🇪13迪拜-电信/移动/南方联通(Tuic)
-  - 🇮🇳14印度-移动/南方联通(Tuic)
-  - 🇸🇬15新加坡-全网优化(Tuic)
-  - 🇸🇬24新加坡-联通/移动(Tuic)
-  - 🇩🇪16德国-电信/联通(Tuic)
-  - 🇬🇧17英国-全网优化(Tuic)
-  - 🇨🇦18加拿大-全网优化(Tuic)
-  - 🇨🇦26加拿大-全网优化(Tuic)
-  - 🇦🇺19澳洲-移动优化(Tuic)
-  - 🇧🇷20巴西-全网优化(Tuic)
-  - 🇨🇱21智利-全网优化(Tuic)
-  - 🇹🇷22土耳其-全网优化(Tuic)
-  - 🇫🇷23法国-全网优化(Tuic)
-  - 🇲🇽27墨西哥-全网优化(Tuic)
-  - 🇳🇱28荷兰-全网优化(Tuic)
-  - 🇮🇱30以色列-全网优化(Tuic)
-  - 🇪🇸31西班牙-全网优化(Tuic)
-  - 🇪🇸🇨🇭41瑞士-全网优化(Tuic)
-  - 🇿🇦43南非-约翰内斯堡(Tuic)
-  - 🇯🇵6日本-集群-专线(TCP)
-  - 🇯🇵7日本-专线(TCP)
-  - 🇯🇵10日本-专线(TCP)
-  - 🇺🇸11美国西集群-专线(TCP)
-  - 🇺🇸12美国旧金山-专线(TCP)
-  - 🇸🇬15新加坡-专线(TCP)
-  - 🇦🇺19澳洲-专线(TCP)
-  - 🇸🇬24新加坡-专线(TCP)
-  - 🇰🇷25韩国-专线(TCP)
-  - 4台湾-专线(TCP)
-  - 5台湾-专线(TCP)
-  - '官网: www.dg6.me'
-- name: 🐴Trojan
-  type: select
-  proxies:
-  - 🇯🇵6日本-集群-专线(TCP)
-  - 🇯🇵7日本-专线(TCP)
-  - 🇯🇵10日本-专线(TCP)
-  - 🇺🇸11美国西集群-专线(TCP)
-  - 🇺🇸12美国旧金山-专线(TCP)
-  - 🇸🇬15新加坡-专线(TCP)
-  - 🇦🇺19澳洲-专线(TCP)
-  - 🇸🇬24新加坡-专线(TCP)
-  - 🇰🇷25韩国-专线(TCP)
-  - 🇭🇰1香港-专线(TCP)
-  - 🇭🇰2香港-专线(TCP)
-  - 🇭🇰3香港-专线(TCP)
-  - 4台湾-专线(TCP)
-  - 5台湾-专线(TCP)
 rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - IP-CIDR,192.168.191.0/24,DIRECT
@@ -1005,64 +285,64 @@ rules:
 - DOMAIN-SUFFIX,apple.com,DIRECT
 - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
 - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
-- DOMAIN,chat.openai.com.cdn.cloudflare.net,🔥ChatGPT
-- DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,🔥ChatGPT
-- DOMAIN-SUFFIX,ai.com,🔥ChatGPT
-- DOMAIN-SUFFIX,chatgpt.com,🔥ChatGPT
-- DOMAIN-SUFFIX,openai.com,🔥ChatGPT
-- DOMAIN-SUFFIX,openaicom.imgix.net,🔥ChatGPT
-- DOMAIN-SUFFIX,sentry.io,🔥ChatGPT
-- DOMAIN-KEYWORD,openai,🔥ChatGPT
-- DOMAIN,api.msn.com,🔥ChatGPT
-- DOMAIN,api.statsig.com,🔥ChatGPT
-- DOMAIN,assets.msn.com,🔥ChatGPT
-- DOMAIN,browser-intake-datadoghq.com,🔥ChatGPT
-- DOMAIN,copilot.microsoft.com,🔥ChatGPT
-- DOMAIN,gateway.bingviz.microsoft.net,🔥ChatGPT
-- DOMAIN,gateway.bingviz.microsoftapp.net,🔥ChatGPT
-- DOMAIN,in.appcenter.ms,🔥ChatGPT
-- DOMAIN,location.microsoft.com,🔥ChatGPT
-- DOMAIN,odc.officeapps.live.com,🔥ChatGPT
-- DOMAIN,openai-api.arkoselabs.com,🔥ChatGPT
-- DOMAIN,openaicomproductionae4b.blob.core.windows.net,🔥ChatGPT
-- DOMAIN,production-openaicom-storage.azureedge.net,🔥ChatGPT
-- DOMAIN,r.bing.com,🔥ChatGPT
-- DOMAIN,self.events.data.microsoft.com,🔥ChatGPT
-- DOMAIN,services.bingapis.com,🔥ChatGPT
-- DOMAIN,static.cloudflareinsights.com,🔥ChatGPT
-- DOMAIN,sydney.bing.com,🔥ChatGPT
-- DOMAIN,www.bing.com,🔥ChatGPT
-- DOMAIN-SUFFIX,algolia.net,🔥ChatGPT
-- DOMAIN-SUFFIX,api.microsoftapp.net,🔥ChatGPT
-- DOMAIN-SUFFIX,auth0.com,🔥ChatGPT
-- DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io,🔥ChatGPT
-- DOMAIN-SUFFIX,challenges.cloudflare.com,🔥ChatGPT
-- DOMAIN-SUFFIX,chatgpt.livekit.cloud,🔥ChatGPT
-- DOMAIN-SUFFIX,client-api.arkoselabs.com,🔥ChatGPT
-- DOMAIN-SUFFIX,edgeservices.bing.com,🔥ChatGPT
-- DOMAIN-SUFFIX,events.statsigapi.net,🔥ChatGPT
-- DOMAIN-SUFFIX,featuregates.org,🔥ChatGPT
-- DOMAIN-SUFFIX,host.livekit.cloud,🔥ChatGPT
-- DOMAIN-SUFFIX,identrust.com,🔥ChatGPT
-- DOMAIN-SUFFIX,intercom.io,🔥ChatGPT
-- DOMAIN-SUFFIX,intercomcdn.com,🔥ChatGPT
-- DOMAIN-SUFFIX,launchdarkly.com,🔥ChatGPT
-- DOMAIN-SUFFIX,oaistatic.com,🔥ChatGPT
-- DOMAIN-SUFFIX,oaiusercontent.com,🔥ChatGPT
-- DOMAIN-SUFFIX,observeit.net,🔥ChatGPT
-- DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🔥ChatGPT
-- DOMAIN-SUFFIX,segment.io,🔥ChatGPT
-- DOMAIN-SUFFIX,stripe.com,🔥ChatGPT
-- DOMAIN-SUFFIX,turn.livekit.cloud,🔥ChatGPT
-- DOMAIN-SUFFIX,sora.com,🔥ChatGPT
-- DOMAIN-KEYWORD,openaicom-api,🔥ChatGPT
-- DOMAIN,cdn.usefathom.com,🔥ChatGPT
-- DOMAIN-SUFFIX,anthropic.com,🔥ChatGPT
-- DOMAIN-SUFFIX,claude.ai,🔥ChatGPT
-- DOMAIN-SUFFIX,razie.ai,🔥ChatGPT
-- DOMAIN-SUFFIX,razie.aws.intellij.net,🔥ChatGPT
-- DOMAIN-SUFFIX,etbrains.ai,🔥ChatGPT
-- DOMAIN-SUFFIX,meta.com,🔥ChatGPT
+- DOMAIN,chat.openai.com.cdn.cloudflare.net,狗狗加速.com
+- DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,狗狗加速.com
+- DOMAIN-SUFFIX,ai.com,狗狗加速.com
+- DOMAIN-SUFFIX,chatgpt.com,狗狗加速.com
+- DOMAIN-SUFFIX,openai.com,狗狗加速.com
+- DOMAIN-SUFFIX,openaicom.imgix.net,狗狗加速.com
+- DOMAIN-SUFFIX,sentry.io,狗狗加速.com
+- DOMAIN-KEYWORD,openai,狗狗加速.com
+- DOMAIN,api.msn.com,狗狗加速.com
+- DOMAIN,api.statsig.com,狗狗加速.com
+- DOMAIN,assets.msn.com,狗狗加速.com
+- DOMAIN,browser-intake-datadoghq.com,狗狗加速.com
+- DOMAIN,copilot.microsoft.com,狗狗加速.com
+- DOMAIN,gateway.bingviz.microsoft.net,狗狗加速.com
+- DOMAIN,gateway.bingviz.microsoftapp.net,狗狗加速.com
+- DOMAIN,in.appcenter.ms,狗狗加速.com
+- DOMAIN,location.microsoft.com,狗狗加速.com
+- DOMAIN,odc.officeapps.live.com,狗狗加速.com
+- DOMAIN,openai-api.arkoselabs.com,狗狗加速.com
+- DOMAIN,openaicomproductionae4b.blob.core.windows.net,狗狗加速.com
+- DOMAIN,production-openaicom-storage.azureedge.net,狗狗加速.com
+- DOMAIN,r.bing.com,狗狗加速.com
+- DOMAIN,self.events.data.microsoft.com,狗狗加速.com
+- DOMAIN,services.bingapis.com,狗狗加速.com
+- DOMAIN,static.cloudflareinsights.com,狗狗加速.com
+- DOMAIN,sydney.bing.com,狗狗加速.com
+- DOMAIN,www.bing.com,狗狗加速.com
+- DOMAIN-SUFFIX,algolia.net,狗狗加速.com
+- DOMAIN-SUFFIX,api.microsoftapp.net,狗狗加速.com
+- DOMAIN-SUFFIX,auth0.com,狗狗加速.com
+- DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io,狗狗加速.com
+- DOMAIN-SUFFIX,challenges.cloudflare.com,狗狗加速.com
+- DOMAIN-SUFFIX,chatgpt.livekit.cloud,狗狗加速.com
+- DOMAIN-SUFFIX,client-api.arkoselabs.com,狗狗加速.com
+- DOMAIN-SUFFIX,edgeservices.bing.com,狗狗加速.com
+- DOMAIN-SUFFIX,events.statsigapi.net,狗狗加速.com
+- DOMAIN-SUFFIX,featuregates.org,狗狗加速.com
+- DOMAIN-SUFFIX,host.livekit.cloud,狗狗加速.com
+- DOMAIN-SUFFIX,identrust.com,狗狗加速.com
+- DOMAIN-SUFFIX,intercom.io,狗狗加速.com
+- DOMAIN-SUFFIX,intercomcdn.com,狗狗加速.com
+- DOMAIN-SUFFIX,launchdarkly.com,狗狗加速.com
+- DOMAIN-SUFFIX,oaistatic.com,狗狗加速.com
+- DOMAIN-SUFFIX,oaiusercontent.com,狗狗加速.com
+- DOMAIN-SUFFIX,observeit.net,狗狗加速.com
+- DOMAIN-SUFFIX,openaiapi-site.azureedge.net,狗狗加速.com
+- DOMAIN-SUFFIX,segment.io,狗狗加速.com
+- DOMAIN-SUFFIX,stripe.com,狗狗加速.com
+- DOMAIN-SUFFIX,turn.livekit.cloud,狗狗加速.com
+- DOMAIN-SUFFIX,sora.com,狗狗加速.com
+- DOMAIN-KEYWORD,openaicom-api,狗狗加速.com
+- DOMAIN,cdn.usefathom.com,狗狗加速.com
+- DOMAIN-SUFFIX,anthropic.com,狗狗加速.com
+- DOMAIN-SUFFIX,claude.ai,狗狗加速.com
+- DOMAIN-SUFFIX,razie.ai,狗狗加速.com
+- DOMAIN-SUFFIX,razie.aws.intellij.net,狗狗加速.com
+- DOMAIN-SUFFIX,etbrains.ai,狗狗加速.com
+- DOMAIN-SUFFIX,meta.com,狗狗加速.com
 - DOMAIN-SUFFIX,cn,DIRECT
 - DOMAIN-KEYWORD,-cn,DIRECT
 - DOMAIN-SUFFIX,126.com,DIRECT
@@ -1563,10 +843,10 @@ rules:
 - IP-CIDR,220.181.174.162/32,狗狗加速.com,no-resolve
 - IP-CIDR,220.181.174.226/32,狗狗加速.com,no-resolve
 - IP-CIDR,220.181.174.34/32,狗狗加速.com,no-resolve
-- IP-CIDR,24.199.123.28/32,🔥ChatGPT,no-resolve
-- IP-CIDR,64.23.132.171/32,🔥ChatGPT,no-resolve
-- IP-CIDR,24.199.123.28/32,🔥ChatGPT,no-resolve
-- IP-CIDR,64.23.132.171/32,🔥ChatGPT,no-resolve
+- IP-CIDR,24.199.123.28/32,狗狗加速.com,no-resolve
+- IP-CIDR,64.23.132.171/32,狗狗加速.com,no-resolve
+- IP-CIDR,24.199.123.28/32,狗狗加速.com,no-resolve
+- IP-CIDR,64.23.132.171/32,狗狗加速.com,no-resolve
 - DOMAIN,injections.adguard.org,DIRECT
 - DOMAIN,local.adguard.org,DIRECT
 - DOMAIN-SUFFIX,local,DIRECT
